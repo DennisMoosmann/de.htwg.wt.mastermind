@@ -32,6 +32,7 @@
         						gameArray[rowIndexGame][columnIndexGame] = e;
         					} else {
         						gameArray[rowIndexGame][columnIndexGame] = '-';
+        						//hallo
         					}
 
         					columnIndexGame++;
