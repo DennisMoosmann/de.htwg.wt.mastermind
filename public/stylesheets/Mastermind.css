@@ -1,0 +1,31 @@
+.navbar .navbar-nav{
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.navbar-mastermind {
+	width: 1000px;
+}
+
+#content {
+	margin: 20px auto;
+	width:970px;
+}
+
+.bs-docs-header {
+    background: #f8f8f8;
+    border-radius: 3px;
+}
+
+.pk {
+	background: pink;
+}

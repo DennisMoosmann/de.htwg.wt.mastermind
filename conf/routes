@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.MainController.index()
+GET 	/command/:commandline		controllers.MainController.commandline(commandline:String)
+GET 	/getGrid					controllers.MainController.getGrid()
+
+GET 	/showSolution				controllers.MainController.showSolution()
+GET		/setValue/:r/:c/:val		controllers.MainController.setValue(r: Integer, c: Integer, val: String)
+GET 	/confirmRow					controllers.MainController.confirmRow()
+GET 	/resetSize/:r/:c			controllers.MainController.resetSize(r: Integer, c: Integer)
+GET 	/getMastermindColors		controllers.MainController.getMastermindColors()
+GET 	/getRowsAmount				controllers.MainController.getRowsAmount()
+GET		/getColumnsAmount			controllers.MainController.getColumnsAmount()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

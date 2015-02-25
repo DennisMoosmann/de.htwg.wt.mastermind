@@ -1,0 +1,37 @@
+<div id="game-navbar">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid navbar-mastermind">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand">Mastermind</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">New game</a></li>
+					<li><a href="#">Show solution</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">12*12</a></li>
+							<li><a href="#">8*8</a></li>
+							<li><a href="#">4*4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+<div id="game-gamefield" class="bs-docs-header">
+	<div class="container">
+		<div class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
+			<div style="float:left" ng-repeat="x in elmt track by $index" ng-class="x">{{x}}</div>
+		</div>
+
+		<div class="row" ng-repeat="elmt in stickArray" ng:init="parentIndex=$index">
+			<div style="float:left" ng-repeat="y in elmt track by $index" ng-class="y">{{y}}</div>
+		</div>
+
+		<div style="width:10px;height:10px;border-radius:50px;background:linear-gradient(to bottom, #40b3ff, #09f)"></div>
+	</div>
+</div>
