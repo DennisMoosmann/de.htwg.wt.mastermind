@@ -12,6 +12,8 @@ import views.html.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.awt.*;
+
 public class MainController extends Controller {
 
 	static IController controller = Mastermind.getInstance().getController();
@@ -84,4 +86,17 @@ public class MainController extends Controller {
     	int columnsAmount = controller.getColumnsAmount();
     	return ok(String.valueOf(columnsAmount));
     }
+
+	public static Result getColorFromString(String color) {
+		if (color.equals("-")) {
+			color = null;
+		}
+		Color c = controller.getColorFromString(color);
+		return ok(String.valueOf(c));
+	}
+
+	public static Result getStatus() {
+		String state = controller.getStatusLine();
+		return ok(state);
+	}
 }

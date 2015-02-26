@@ -22,6 +22,23 @@
 		</div>
 	</nav>
 </div>
+<div id="game-head">
+	<div class="col-md-6">
+		<div id="game-status" class="bs-docs-header">
+			<label>{{status}}</label>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div id="game-mastercolors" class="bs-docs-header">
+			<div ng-repeat="color in masterColors track by $index" style="float:left">
+				<div class={{color}} style="width:10px;height:10px;border-radius:50px"></div>
+				<!--<div style="width:20px;height:20px;border-radius:50px;background:linear-gradient(to bottom, #40b3ff, #09f)"></div>-->
+			</div>
+		</div>
+	</div>
+</div>
+</br>
+</br>
 <div id="game-gamefield" class="bs-docs-header">
 	<div class="container">
 		<div class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
@@ -32,6 +49,6 @@
 			<div style="float:left" ng-repeat="y in elmt track by $index" ng-class="y">{{y}}</div>
 		</div>
 
-		<div style="width:10px;height:10px;border-radius:50px;background:linear-gradient(to bottom, #40b3ff, #09f)"></div>
+
 	</div>
 </div>

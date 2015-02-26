@@ -42,7 +42,13 @@
         			rowIndexGame++;
         });
 
+		$scope.masterColors = grid[0];
 		$scope.stickArray = stickArray;
         $scope.gameArray = gameArray;
  	});
+
+	MasterService.getStatus().then(function(response) {
+		var status = response.data;
+		$scope.status = status;
+	});
  });
