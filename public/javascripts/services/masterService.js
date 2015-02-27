@@ -1,25 +1,21 @@
-//angular.module('mastermindApp').service('MasterService', function($http) {
-//	var myServiceObject = {
-//		getGrid: function() {
-//			return $http.get('/getGrid');
-//		}
-//	};
-//
-//	return myServiceObject;
-//});
-
 angular.module('mastermindApp')
 
 .service('MasterService', function($http) {
     return {
-//        getStatus: function() {
-//            return $http.get('/getStatus');
-//        },
         getGrid: function() {
             return $http.get('/getGrid');
         },
         getStatus: function() {
         	return $http.get('/getStatus');
+        },
+        showSolution: function() {
+            return $http.get('/showSolution');
+        },
+        setValue: function(row, col, val) {
+            return $http.get('/setValue/' + row + '/' + col + '/' + val);
+        },
+        getActualRow: function() {
+            return $http.get('/getActualRow');
         }
     };
 });

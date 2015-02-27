@@ -56,4 +56,55 @@
 		var status = response.data;
 		$scope.status = status;
 	});
+
+	MasterService.getActualRow().then(function(response) {
+		var actualRow = response.data;
+		$scope.actualRow = actualRow;
+	});
+
+	$scope.showSol = function() {
+		MasterService.showSolution().then(function(response) {
+			var colors = response.data.masterColors;
+        	$scope.masterColors = colors;
+		});
+     };
+
+     $scope.setValue = function(row, col, val) {
+     	MasterService.setValue(row, col, val).then(function(response) {
+
+     		if (val == "gy") {
+     			val = "yl";
+     		}
+
+     		if (val == "yl") {
+            	val = "bl";
+            }
+
+            if (val == "bl") {
+				val = "gr";
+			}
+
+			if (val == "gr") {
+				val = "rd";
+			}
+
+			if (val == "rd") {
+				val = "or";
+			}
+
+			if (val == "or") {
+				val = "pk";
+			}
+
+			if (val == "pk") {
+				val = "pu";
+			}
+
+			if (val == "pu") {
+				val = "yl";
+			}
+
+     		$scope.gameArray[row][col] = val;
+     	});
+     }
  });

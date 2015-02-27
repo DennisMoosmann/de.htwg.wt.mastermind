@@ -16,6 +16,7 @@ GET 	/getRowsAmount				controllers.MainController.getRowsAmount()
 GET		/getColumnsAmount			controllers.MainController.getColumnsAmount()
 GET     /getColorFromString/:c      controllers.MainController.getColorFromString(c: String)
 GET     /getStatus                  controllers.MainController.getStatus()
+GET     /getActualRow               controllers.MainController.getActualRow()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

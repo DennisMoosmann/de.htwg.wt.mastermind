@@ -74,7 +74,10 @@ public class MainController extends Controller {
     
     public static Result showSolution() {
     	controller.showSolution();
-    	return ok();
+		String [] masterColors = controller.getMastermindColors();
+		ObjectNode result = Json.newObject();
+		result.put("masterColors", Json.toJson(masterColors));
+    	return ok(result);
     }
     
     public static Result getRowsAmount() {
@@ -98,5 +101,10 @@ public class MainController extends Controller {
 	public static Result getStatus() {
 		String state = controller.getStatusLine();
 		return ok(state);
+	}
+
+	public static Result getActualRow() {
+		int actualRow = controller.getActualRow();
+		return ok(String.valueOf(actualRow));
 	}
 }
