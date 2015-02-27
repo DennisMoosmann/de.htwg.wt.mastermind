@@ -27,7 +27,7 @@
 }
 
 #game-mastercolors {
-   background: #99FF66;
+   background: #f8f8f8;
    border-radius: 3px;
 }
 
@@ -36,12 +36,20 @@
     border-radius: 3px;
 }
 
+#game-balls {
+    margin-left:165px;
+}
+
 .xx {
     background: grey;
 }
 
 .bl {
     background: blue;
+}
+
+.or {
+    background: orange;
 }
 
 .gr {
@@ -66,4 +74,12 @@
 
 .pk {
 	background: pink;
+}
+
+.wh {
+    background: white;
+}
+
+.bk {
+    background: black;
 }
