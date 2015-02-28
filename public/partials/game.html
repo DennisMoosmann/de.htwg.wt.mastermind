@@ -7,8 +7,8 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">New game</a></li>
-					<li><a href="" ng-click="showSol()">Show solution</a></li>
+					<li><a href="" ng-click="newGame()">New game</a></li>
+					<li><a href="" ng-click="showSolution()">Show solution</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
@@ -43,7 +43,7 @@
 		<div class="col-md-3">
 		</div>
 		<div class="col-md-2">
-			<div class="create-button btn btn-default" ng-click="showSol()">Confirm Row</div>
+			<div id="btnConfirmRow" class="create-button btn btn-default" ng-click="confirmRow()">Confirm Row</div>
 		</div>
 		<div class="col-md-2">
 			<div class="row" ng-repeat="stick in stickArray" ng:init="parentIndex=$index">

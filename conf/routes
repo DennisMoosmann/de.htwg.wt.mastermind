@@ -6,7 +6,6 @@
 GET     /                           controllers.MainController.index()
 GET 	/command/:commandline		controllers.MainController.commandline(commandline:String)
 GET 	/getGameGrid				controllers.MainController.getGameGrid()
-
 GET 	/showSolution				controllers.MainController.showSolution()
 GET		/setValue/:r/:c/:val		controllers.MainController.setValue(r: Integer, c: Integer, val: String)
 GET 	/confirmRow					controllers.MainController.confirmRow()
@@ -18,6 +17,8 @@ GET     /getColorFromString/:c      controllers.MainController.getColorFromStrin
 GET     /getStatus                  controllers.MainController.getStatus()
 GET     /getActualRow               controllers.MainController.getActualRow()
 GET     /getStickGrid               controllers.MainController.getStickGrid()
+GET     /newGame                    controllers.MainController.newGame()
+GET     /isSolved                   controllers.MainController.isSolved()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -82,7 +82,8 @@ public class MainController extends Controller {
     
     public static Result confirmRow() {
     	controller.confirmRow();
-    	return ok();
+		int actualRow = controller.getActualRow();
+    	return ok(String.valueOf(actualRow));
     }
     
     public static Result getMastermindColors() {
@@ -142,5 +143,17 @@ public class MainController extends Controller {
 	public static Result getActualRow() {
 		int actualRow = controller.getActualRow();
 		return ok(String.valueOf(actualRow));
+	}
+
+	public static Result newGame() {
+		int rowsAmount = controller.getRowsAmount();
+		int columnsAmount = controller.getColumnsAmount();
+		controller.create(rowsAmount, columnsAmount);
+		return ok();
+	}
+
+	public static  Result isSolved() {
+		boolean isSolved = controller.isSolved();
+		return ok(String.valueOf(isSolved));
 	}
 }

@@ -14,11 +14,17 @@ angular.module('mastermindApp')
         getStickGrid: function() {
             return $http.get('/getStickGrid');
         },
+        newGame: function () {
+            return $http.get('/newGame');
+        },
         showSolution: function() {
             return $http.get('/showSolution');
         },
         setValue: function(row, col, val) {
             return $http.get('/setValue/' + row + '/' + col + '/' + val);
+        },
+        confirmRow: function() {
+            return $http.get('/confirmRow');
         },
         getActualRow: function() {
             return $http.get('/getActualRow');
@@ -28,6 +34,9 @@ angular.module('mastermindApp')
         },
         getColumnsAmount: function() {
             return $http.get('/getColumnsAmount');
+        },
+        isSolved: function() {
+            return $http.get('/isSolved');
         }
     };
 });

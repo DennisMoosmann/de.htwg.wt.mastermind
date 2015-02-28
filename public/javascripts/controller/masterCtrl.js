@@ -53,7 +53,12 @@
 		$scope.columnsAmount = columnsAmount;
 	});
 
-	$scope.showSol = function() {
+	$scope.newGame = function() {
+		MasterService.newGame().then(function() {
+		});
+	};
+
+	$scope.showSolution = function() {
 		MasterService.showSolution().then(function(response) {
 			var colors = response.data.masterColors;
         	$scope.masterColors = colors;
@@ -104,5 +109,21 @@
 			MasterService.setValue(row, newCol, value).then(function(response) {
 			});
 		}
+     };
+
+     $scope.confirmRow = function() {
+		MasterService.confirmRow().then(function(response) {
+			$scope.actualRow = response.data;
+			if ($scope.isSolved() == "true") {
+				btnConfirmRow.disabled = true;
+			}
+		});
+     };
+
+     $scope.isSolved = function() {
+     	MasterService.isSolved().then(function(response) {
+     		var isSolved = response.data;
+     		return isSolved;
+     	});
      };
  });
