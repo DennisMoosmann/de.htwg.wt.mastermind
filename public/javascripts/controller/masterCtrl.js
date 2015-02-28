@@ -1,17 +1,27 @@
  angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService) {
- 
+
+ 	MasterService.getStatus().then(function(response) {
+		var status = response.data;
+		$scope.status = status;
+	});
+
+	MasterService.getMastermindColors().then(function(response) {
+		var masterColors = response.data.masterColors;
+		$scope.masterColors = masterColors;
+	});
+
  	MasterService.getGameGrid().then(function(response) {
-     		var gameGrid = response.data.gameGrid;
+		var gameGrid = response.data.gameGrid;
 
-     		angular.forEach(gameGrid, function(el, i){
-    			angular.forEach(el, function(e, j) {
-    				if (e == null) {
-    					gameGrid[i][j] = 'gy';
-    				}
-    			});
-    		});
+		angular.forEach(gameGrid, function(el, i){
+			angular.forEach(el, function(e, j) {
+				if (e == null) {
+					gameGrid[i][j] = 'gy';
+				}
+			});
+		});
 
-    		$scope.gameArray = gameGrid;
+		$scope.gameArray = gameGrid;
      });
 
 	MasterService.getStickGrid().then(function(response) {
@@ -26,11 +36,6 @@
 		});
 
 		$scope.stickArray = stickGrid;
-	});
-
-	MasterService.getStatus().then(function(response) {
-		var status = response.data;
-		$scope.status = status;
 	});
 
 	MasterService.getActualRow().then(function(response) {
@@ -55,45 +60,49 @@
 		});
     };
 
-   	$scope.setValue = function(row, col, val) {
-   		var value;
-		if (val == "gy") {
-			value = "yl";
-		}
-
-		if (val == "yl") {
-			value = "bl";
-		}
-
-		if (val == "bl") {
-			value = "gr";
-		}
-
-		if (val == "gr") {
-			value = "rd";
-		}
-
-		if (val == "rd") {
-			value = "or";
-		}
-
-		if (val == "or") {
-			value = "pk";
-		}
-
-		if (val == "pk") {
-			value = "pu";
-		}
-
-		if (val == "pu") {
-			value = "yl";
-		}
-
+   	$scope.setValue = function(row, clickedRow, col, val) {
 		newRow = $scope.rowsAmount - 2 - row;
-		$scope.gameArray[newRow][col] = value;
-		newCol = $scope.columnsAmount/2 - 1 - col;
 
-    	MasterService.setValue(row, newCol, value).then(function(response) {
-		});
+		if (newRow == clickedRow) {
+			var value;
+			if (val == "gy") {
+				value = "yl";
+			}
+
+			if (val == "yl") {
+				value = "bl";
+			}
+
+			if (val == "bl") {
+				value = "gr";
+			}
+
+			if (val == "gr") {
+				value = "rd";
+			}
+
+			if (val == "rd") {
+				value = "or";
+			}
+
+			if (val == "or") {
+				value = "pk";
+			}
+
+			if (val == "pk") {
+				value = "pu";
+			}
+
+			if (val == "pu") {
+				value = "yl";
+			}
+
+
+			$scope.gameArray[newRow][col] = value;
+			newCol = $scope.columnsAmount/2 - 1 - col;
+
+			MasterService.setValue(row, newCol, value).then(function(response) {
+			});
+		}
      };
  });

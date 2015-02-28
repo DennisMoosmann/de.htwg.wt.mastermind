@@ -55,7 +55,7 @@
 		<div class="col-md-5">
 			<div class="row" id="game-balls" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
 				<div style="float:left;margin-left:15px;margin-top:15px; border-radius:50px" ng-repeat="x in elmt track by $index" ng-class="x">
-					<div class={{x}} ng-attr-id="" style="width:30px;height:30px;border-radius:50px" ng-click="setValue(actualRow,$index,x)"></div>
+					<div class={{x}} ng-attr-id="" style="width:30px;height:30px;border-radius:50px" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
 				</div>
 			</div>
 		</div>

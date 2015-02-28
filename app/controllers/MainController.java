@@ -86,7 +86,15 @@ public class MainController extends Controller {
     }
     
     public static Result getMastermindColors() {
-    	String [] masterColors = controller.getMastermindColors();
+		IGrid grid = controller.getGrid();
+		String [] masterColors = new String[controller.getColumnsAmount()/2];
+
+		int index = 0;
+		for (int i = masterColors.length-1; i >= 0; i--) {
+			masterColors[index] = controller.getValue(controller.getRowsAmount() - 1, i);
+			index++;
+		}
+
     	ObjectNode result = Json.newObject();
     	result.put("masterColors", Json.toJson(masterColors));
     	return ok(result);
@@ -95,8 +103,16 @@ public class MainController extends Controller {
     public static Result showSolution() {
     	controller.showSolution();
 		String [] masterColors = controller.getMastermindColors();
+		String [] newOrder = new String[masterColors.length];
+
+		int index = masterColors.length - 1;
+		for (int i = 0; i < masterColors.length; i++) {
+			newOrder[i] = masterColors[index];
+			index--;
+		}
+
 		ObjectNode result = Json.newObject();
-		result.put("masterColors", Json.toJson(masterColors));
+		result.put("masterColors", Json.toJson(newOrder));
     	return ok(result);
     }
     

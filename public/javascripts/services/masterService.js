@@ -2,14 +2,17 @@ angular.module('mastermindApp')
 
 .service('MasterService', function($http) {
     return {
+        getStatus: function() {
+            return $http.get('/getStatus');
+        },
+        getMastermindColors: function() {
+            return $http.get('/getMastermindColors');
+        },
         getGameGrid: function() {
             return $http.get('/getGameGrid');
         },
         getStickGrid: function() {
             return $http.get('/getStickGrid');
-        },
-        getStatus: function() {
-        	return $http.get('/getStatus');
         },
         showSolution: function() {
             return $http.get('/showSolution');
