@@ -5,7 +5,7 @@
 # Home page
 GET     /                           controllers.MainController.index()
 GET 	/command/:commandline		controllers.MainController.commandline(commandline:String)
-GET 	/getGrid					controllers.MainController.getGrid()
+GET 	/getGameGrid				controllers.MainController.getGameGrid()
 
 GET 	/showSolution				controllers.MainController.showSolution()
 GET		/setValue/:r/:c/:val		controllers.MainController.setValue(r: Integer, c: Integer, val: String)
@@ -17,6 +17,7 @@ GET		/getColumnsAmount			controllers.MainController.getColumnsAmount()
 GET     /getColorFromString/:c      controllers.MainController.getColorFromString(c: String)
 GET     /getStatus                  controllers.MainController.getStatus()
 GET     /getActualRow               controllers.MainController.getActualRow()
+GET     /getStickGrid               controllers.MainController.getStickGrid()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

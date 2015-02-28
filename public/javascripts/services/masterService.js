@@ -2,8 +2,11 @@ angular.module('mastermindApp')
 
 .service('MasterService', function($http) {
     return {
-        getGrid: function() {
-            return $http.get('/getGrid');
+        getGameGrid: function() {
+            return $http.get('/getGameGrid');
+        },
+        getStickGrid: function() {
+            return $http.get('/getStickGrid');
         },
         getStatus: function() {
         	return $http.get('/getStatus');
@@ -16,6 +19,12 @@ angular.module('mastermindApp')
         },
         getActualRow: function() {
             return $http.get('/getActualRow');
+        },
+        getRowsAmount: function() {
+            return $http.get('/getRowsAmount');
+        },
+        getColumnsAmount: function() {
+            return $http.get('/getColumnsAmount');
         }
     };
 });

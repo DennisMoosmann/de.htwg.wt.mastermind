@@ -30,15 +30,15 @@ public class MainController extends Controller {
     /*
      * Gets the actual grid with it's values
      */
-    public static Result getGrid() {
+    public static Result getGameGrid() {
     	IGrid grid = controller.getGrid();
-    	String[][] field = new String[grid.getRowsAmount()][grid.getColumnsAmount()];
+    	String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
     	ObjectNode result = Json.newObject();
 
 		int rowIndex = 0;
 		int columnIndex = 0;
-		for (int i = controller.getRowsAmount() - 1; i >= 0; i--) {
-			for (int j = controller.getColumnsAmount() - 1; j >= 0; j--) {
+		for (int i = controller.getRowsAmount() - 2; i >= 0; i--) {
+			for (int j = controller.getColumnsAmount()/2 - 1; j >= 0; j--) {
 				field[rowIndex][columnIndex] = controller.getValue(i, j);
 				columnIndex++;
 			}
@@ -46,9 +46,29 @@ public class MainController extends Controller {
 			rowIndex++;
 		}
     	
-    	result.put("grid", Json.toJson(field));
+    	result.put("gameGrid", Json.toJson(field));
     	return ok(result);
     }
+
+	public static Result getStickGrid() {
+		IGrid grid = controller.getGrid();
+		String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
+		ObjectNode result = Json.newObject();
+
+		int rowIndex = 0;
+		int columnIndex = 0;
+		for (int i = controller.getRowsAmount()-2; i >= 0; i--) {
+			for (int j = grid.getColumnsAmount()/2; j < controller.getColumnsAmount(); j++) {
+				field[rowIndex][columnIndex] = controller.getValue(i, j);
+				columnIndex++;
+			}
+			columnIndex = 0;
+			rowIndex++;
+		}
+
+		result.put("stickGrid", Json.toJson(field));
+		return ok(result);
+	}
     
     public static Result setValue(int row, int column, String value) {
 		controller.setValue(row, column, value);
