@@ -66,49 +66,51 @@
     };
 
    	$scope.setValue = function(row, clickedRow, col, val) {
-		newRow = $scope.rowsAmount - 2 - row;
+   		if (!$scope.isSolved()) {
+   			newRow = $scope.rowsAmount - 2 - row;
 
-		if (newRow == clickedRow) {
-			var value;
-			if (val == "gy") {
-				value = "yl";
+			if (newRow == clickedRow) {
+				var value;
+				if (val == "gy") {
+					value = "yl";
+				}
+
+				if (val == "yl") {
+					value = "bl";
+				}
+
+				if (val == "bl") {
+					value = "gr";
+				}
+
+				if (val == "gr") {
+					value = "rd";
+				}
+
+				if (val == "rd") {
+					value = "or";
+				}
+
+				if (val == "or") {
+					value = "pk";
+				}
+
+				if (val == "pk") {
+					value = "pu";
+				}
+
+				if (val == "pu") {
+					value = "yl";
+				}
+
+
+				$scope.gameArray[newRow][col] = value;
+				newCol = $scope.columnsAmount/2 - 1 - col;
+
+				MasterService.setValue(row, newCol, value).then(function(response) {
+				});
 			}
-
-			if (val == "yl") {
-				value = "bl";
-			}
-
-			if (val == "bl") {
-				value = "gr";
-			}
-
-			if (val == "gr") {
-				value = "rd";
-			}
-
-			if (val == "rd") {
-				value = "or";
-			}
-
-			if (val == "or") {
-				value = "pk";
-			}
-
-			if (val == "pk") {
-				value = "pu";
-			}
-
-			if (val == "pu") {
-				value = "yl";
-			}
-
-
-			$scope.gameArray[newRow][col] = value;
-			newCol = $scope.columnsAmount/2 - 1 - col;
-
-			MasterService.setValue(row, newCol, value).then(function(response) {
-			});
-		}
+   		}
      };
 
      $scope.confirmRow = function() {
