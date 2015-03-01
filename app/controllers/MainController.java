@@ -152,7 +152,7 @@ public class MainController extends Controller {
 		return ok();
 	}
 
-	public static  Result isSolved() {
+	public static Result isSolved() {
 		boolean isSolved = controller.isSolved();
 		return ok(String.valueOf(isSolved));
 	}

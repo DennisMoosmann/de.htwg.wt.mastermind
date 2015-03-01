@@ -37,6 +37,9 @@ angular.module('mastermindApp')
         },
         isSolved: function() {
             return $http.get('/isSolved');
+        },
+        resetSize: function(rows, cols) {
+            return $http.get('/resetSize/' + rows + '/' + cols);
         }
     };
 });
