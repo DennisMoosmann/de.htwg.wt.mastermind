@@ -52,18 +52,25 @@ public class MainController extends Controller {
 
 	public static Result getStickGrid() {
 		IGrid grid = controller.getGrid();
-		String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
+		int rowsAmount = (grid.getRowsAmount() - 1) * 2;
+		int columnsAmount = grid.getRowsAmount()/4;
+		String [][] field = new String[rowsAmount][columnsAmount];
 		ObjectNode result = Json.newObject();
 
 		int rowIndex = 0;
-		int columnIndex = 0;
-		for (int i = controller.getRowsAmount()-2; i >= 0; i--) {
-			for (int j = grid.getColumnsAmount()/2; j < controller.getColumnsAmount(); j++) {
-				field[rowIndex][columnIndex] = controller.getValue(i, j);
-				columnIndex++;
+		int colIndex = 0;
+
+
+		for (int i = controller.getRowsAmount() - 2; i >= 0; i--) {
+			for (int j = controller.getColumnsAmount()/2; j < controller.getColumnsAmount(); j++) {
+				field[rowIndex][colIndex] = controller.getValue(i, j);
+				colIndex++;
+
+				if (colIndex >= controller.getColumnsAmount()/4) {
+					colIndex = 0;
+					rowIndex++;
+				}
 			}
-			columnIndex = 0;
-			rowIndex++;
 		}
 
 		result.put("stickGrid", Json.toJson(field));

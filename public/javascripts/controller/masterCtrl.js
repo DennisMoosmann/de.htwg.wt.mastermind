@@ -8,6 +8,7 @@
         $scope.getActualRow();
         $scope.getRowsAmount();
         $scope.getColumnsAmount();
+        $scope.isSolved();
     };
 
     $scope.getStatus = function() {
@@ -88,8 +89,8 @@
     };
 
    	$scope.setValue = function(row, clickedRow, col, val) {
-   	    $scope.isSolved();
-   		if (!$scope.solved) {
+        $scope.isSolved();
+   		if ($scope.solved == "false") {
    			newRow = $scope.rowsAmount - 2 - row;
 
 			if (newRow == clickedRow) {
