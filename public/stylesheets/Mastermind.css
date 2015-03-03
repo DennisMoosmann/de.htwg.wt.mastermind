@@ -29,7 +29,6 @@
 #game-mastercolors {
    background: #f8f8f8;
    border-radius: 3px;
-   margin-left:163px;
 }
 
 #game-gamefield {
@@ -37,8 +36,17 @@
     border-radius: 3px;
 }
 
+#btnConfirmRow {
+    
+}
+
 #game-balls {
-    margin-left:70px;
+
+}
+
+#stick-balls {
+
+
 }
 
 .xx {

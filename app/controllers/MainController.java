@@ -26,10 +26,7 @@ public class MainController extends Controller {
     	Mastermind.getInstance().getTUI().processInputLine(command);
     	return ok(views.html.index.render("Got your command "+ command, controller));
     }
-    
-    /*
-     * Gets the actual grid with it's values
-     */
+
     public static Result getGameGrid() {
     	IGrid grid = controller.getGrid();
     	String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
@@ -109,6 +106,7 @@ public class MainController extends Controller {
     }
     
     public static Result showSolution() {
+		//IGrid grid = controller.getGrid();
     	controller.showSolution();
 		String [] masterColors = controller.getMastermindColors();
 		String [] newOrder = new String[masterColors.length];

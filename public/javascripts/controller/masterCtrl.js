@@ -9,6 +9,8 @@
         $scope.getRowsAmount();
         $scope.getColumnsAmount();
         $scope.isSolved();
+        $scope.isShown = false;
+        btnConfirmRow.disabled = false;
     };
 
     $scope.getStatus = function() {
@@ -82,14 +84,19 @@
 		});
 	};
 
-	$scope.showSolution = function() {
+	$scope.showSolution = function(location) {
 		MasterService.showSolution().then(function(response) {
-			$scope.getMastermindColors();
+		    if (!$scope.isShown) {
+		        $scope.getMastermindColors();
+                if (location == "true") {
+                    $scope.getStatus();
+                }
+                 $scope.isShown = true;
+		    }
 		});
     };
 
    	$scope.setValue = function(row, clickedRow, col, val) {
-        $scope.isSolved();
    		if ($scope.solved == "false") {
    			newRow = $scope.rowsAmount - 2 - row;
 
@@ -143,9 +150,7 @@
 		    $scope.getStatus();
 		    $scope.getStickGrid();
 			$scope.actualRow = response.data;
-			if ($scope.isSolved()) {
-				btnConfirmRow.disabled = true;
-			}
+			$scope.isSolved();
 		});
      };
 
@@ -153,6 +158,12 @@
      	MasterService.isSolved().then(function(response) {
      		var isSolved = response.data;
      		$scope.solved = isSolved;
+
+            var tempRowsAmount = ($scope.rowsAmount - 1).toString();
+     		if ($scope.solved == "true" || $scope.actualRow == tempRowsAmount) {
+                btnConfirmRow.disabled = true;
+                $scope.showSolution("false");
+            }
      	});
      };
 
