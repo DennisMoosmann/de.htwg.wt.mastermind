@@ -1,4 +1,4 @@
- angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService) {
+ angular.module('mastermindApp').controller('MasterCtrl', function($scope, $timeout, MasterService) {
 
     $scope.init = function() {
         $scope.getStatus();
@@ -8,9 +8,14 @@
         $scope.getActualRow();
         $scope.getRowsAmount();
         $scope.getColumnsAmount();
-        $scope.isSolved();
+        //$scope.isSolved();
+        $scope.solved = "false";
         $scope.isShown = false;
-        btnConfirmRow.disabled = false;
+
+        $scope.$watch("stickBall", function(){
+            $scope.setButtonPosition(true);
+        });
+
     };
 
     $scope.getStatus = function() {
@@ -19,6 +24,32 @@
         	$scope.status = status;
         });
     };
+
+    $scope.setButtonPosition = function(initial) {
+        if (initial) {
+            var stickRows = stickBall.length;
+            var gridCols = $scope.stickArray[0].length;
+            var marginMul = (stickRows/gridCols);
+            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) + 3) + "px";
+
+            if ($scope.rowsAmount == 12) {
+                btnConfirmRow.style.marginTop = buttonPos;
+            } else if ($scope.rowsAmount == 8) {
+                btnConfirmRow.style.marginTop = buttonPos;
+            } else {
+                btnConfirmRow.style.marginTop = buttonPos;
+            }
+
+            $scope.buttonPosition = buttonPos;
+
+        } else {
+            var tempPos = $scope.buttonPosition.toString();
+            tempPos = parseInt(tempPos);
+            var newPos = (tempPos - 50) + "px";
+            btnConfirmRow.style.marginTop = newPos;
+            $scope.buttonPosition = newPos;
+        }
+    }
 
 	$scope.getMastermindColors = function() {
         MasterService.getMastermindColors().then(function(response) {
@@ -68,6 +99,7 @@
         MasterService.getRowsAmount().then(function(response) {
             var rowsAmount = response.data;
             $scope.rowsAmount = rowsAmount;
+            //$scope.setButtonPosition(true);
         });
     };
 
@@ -81,6 +113,7 @@
 	$scope.newGame = function() {
 		MasterService.newGame().then(function() {
 		    $scope.init();
+		    btnConfirmRow.disabled = false;
 		});
 	};
 
@@ -145,33 +178,49 @@
    		}
      };
 
-     $scope.confirmRow = function() {
-		MasterService.confirmRow().then(function(response) {
-		    $scope.getStatus();
-		    $scope.getStickGrid();
-			$scope.actualRow = response.data;
-			$scope.isSolved();
-		});
-     };
-
-     $scope.isSolved = function() {
-     	MasterService.isSolved().then(function(response) {
-     		var isSolved = response.data;
-     		$scope.solved = isSolved;
-
+    $scope.confirmRow = function() {
+        MasterService.confirmRow().then(function(response) {
+            var conf = response.data.conf;
             var tempRowsAmount = ($scope.rowsAmount - 1).toString();
-     		if ($scope.solved == "true" || $scope.actualRow == tempRowsAmount) {
-                btnConfirmRow.disabled = true;
-                $scope.showSolution("false");
-            }
-     	});
-     };
+            $scope.getStatus();
+            $scope.getStickGrid();
+            $scope.solved = conf[1];
+            $scope.actualRow = conf[2];
 
-     $scope.resetSize = function(rows, cols) {
+
+            if (conf[0] == "true") {
+                if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
+                    //setButtonPosition(false);
+                } else {
+                    btnConfirmRow.disabled = true;
+                    $scope.showSolution("false");
+                }
+
+            }
+
+
+
+            //$scope.getActualRow();
+            //$scope.isSolved();
+
+            //$scope.actualRow = response.data;
+            //$scope.isSolved();
+        });
+    };
+
+    $scope.isSolved = function() {
+        MasterService.isSolved().then(function(response) {
+            var isSolved = response.data;
+            $scope.solved = isSolved;
+        });
+    };
+
+    $scope.resetSize = function(rows, cols) {
         MasterService.resetSize(rows, cols).then(function(response) {
             $scope.init();
+            btnConfirmRow.disabled = false;
         });
-     };
+    };
 
-     $scope.init();
+    $scope.init();
  });

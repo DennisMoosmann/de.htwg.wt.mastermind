@@ -21,21 +21,24 @@
 		</div>
 	</nav>
 </div>
-<div id="game-head">
-	<div class="col-md-6">
-		<div id="game-status" class="bs-docs-header">
-			<label>{{status}}</label>
+<div id="game-head" >
+	<div class="container">
+		<div class="col-md-6">
+			<div id="game-status" >
+				<label id="status">{{status}}</label>
+			</div>
 		</div>
-	</div>
-	<div class="col-md-6">
-		<div id="game-mastercolors" class="bs-docs-header">
-			<div ng-repeat="color in masterColors track by $index" style="float:left;">
-				<div class={{color}} style="width:30px;height:30px;border-radius:50px;margin-left:15px;"></div>
+		<div class="col-md-6">
+			<div id="game-mastercolors" class="bs-docs-header">
+				<div class="container">
+					<div ng-repeat="color in masterColors track by $index" style="float:left;">
+						<div id="masters" class={{color}}></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</br>
 </br>
 <div id="game-gamefield" class="bs-docs-header">
 	<div class="container">
@@ -45,17 +48,17 @@
 			<!--<div id="btnConfirmRow" class="create-button btn btn-default" ng-click="confirmRow()">Confirm Row</div>-->
 			<button id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
 		</div>
-		<div class="col-md-1 col-md-offset-1">
+		<div class="col-md-2 ">
 			<div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng:init="parentIndex=$index">
-				<div style="float:left; margin-left:5px;margin-top:8px;border-radius:50px" ng-repeat="y in stick track by $index" ng-class="y">
-					<div class={{y}} style="width:15px;height:15px;border-radius:50px;"></div>
+				<div id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
+					<div id="ball" class={{y}}></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
-				<div style="float:left;margin-left:15px;margin-top:15px; border-radius:50px" ng-repeat="x in elmt track by $index" ng-class="x">
-					<div class={{x}} ng-attr-id="" style="width:30px;height:30px;border-radius:50px" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+				<div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">
+					<div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
 				</div>
 			</div>
 		</div>

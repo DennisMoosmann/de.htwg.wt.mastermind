@@ -8,8 +8,8 @@ angular.module('mastermindApp', ['ui.router'])
         $stateProvider
             .state('welcome', {
                 url: '/',
-                templateUrl: 'assets/partials/home.html',
-                controller: 'MasterCtrl'
+                templateUrl: 'assets/partials/home.html'
+                //controller: 'MasterCtrl'
             })
             .state('game', {
                 url: '/game',

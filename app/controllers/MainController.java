@@ -86,8 +86,16 @@ public class MainController extends Controller {
     
     public static Result confirmRow() {
     	controller.confirmRow();
-		int actualRow = controller.getActualRow();
-    	return ok(String.valueOf(actualRow));
+		//int actualRow = controller.getActualRow();
+		String [] conf = new String[3];
+		conf[0] = String.valueOf(controller.getRowConfirmed());
+		conf[1] = String.valueOf(controller.isSolved());
+		conf[2] = String.valueOf(controller.getActualRow());
+
+		ObjectNode result = Json.newObject();
+		result.put("conf", Json.toJson(conf));
+
+    	return ok(result);
     }
     
     public static Result getMastermindColors() {

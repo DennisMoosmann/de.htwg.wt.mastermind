@@ -21,32 +21,69 @@
 	width:970px;
 }
 
+
+#game-head {
+   border-radius: 3px;
+}
+
 #game-status {
-    background: #FFCC99;
+    background: #f8f8f8;
     border-radius: 3px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#status {
+    margin-top:12px;
+    margin-left:15px;
 }
 
 #game-mastercolors {
-   background: #f8f8f8;
-   border-radius: 3px;
+    background: #f8f8f8;
+    height: 50px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#masters {
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    margin-left:15px;
+    margin-top:10px;
+    border-style: solid;
 }
 
 #game-gamefield {
     background: #f8f8f8;
     border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
 }
 
-#btnConfirmRow {
-    
+.btn-success {
+
+}
+
+#ball {
+    width:15px;
+    height:15px;
+    border-radius:50px;
+    border-style: solid;
+}
+
+#bal {
+    border-style: solid;
 }
 
 #game-balls {
-
+    margin-left:15px;
 }
 
 #stick-balls {
-
-
+    margin-left:80px;
 }
 
 .xx {

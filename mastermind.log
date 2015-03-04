@@ -1,1218 +1,28 @@
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | or or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | rd yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Row [1] confirmed!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    yl |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    bl |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    gr |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    rd |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    or |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | yl or |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | bl or |
-+-------+-------+
-| bk    | yl or |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-You have lost!!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | bl or |
-+-------+-------+
-| bk    | yl or |[2]
-| bk    | pk or |[1]
-| wh    | or gr |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Solution is shown
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Please enter command: 
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       |       |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-New game has been created!
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-100 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       |    yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | yl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Row [0] confirmed!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl    |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | bl    |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | bl yl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Row [1] confirmed!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | yl    |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl    |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl yl |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl bl |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl gr |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl rd |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | bl or |
-+-------+-------+
-| bk    | bl rd |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-You have lost!!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | bl or |
-+-------+-------+
-| bk    | bl rd |[2]
-| bk    | bl bl |[1]
-| bk    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Solution is shown
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       |       |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-New game has been created!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       |    yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | yl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[1] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[1] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Row [0] confirmed!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl    |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl yl |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl bl |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Row [1] confirmed!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | yl    |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl    |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl yl |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl bl |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl gr |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl rd |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl or |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl pk |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | rd bl |
-+-------+-------+
-| wh    | bl pk |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-You have lost!!
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-101 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-89 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | rd bl |
-+-------+-------+
-| wh    | bl pk |[2]
-|       | yl gr |[1]
-| wh    | bl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-89 de.htwg.se.mastermind.view.tui - 
-Solution is shown
-INFO play-akka.actor.default-dispatcher-89 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-89 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-89 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-91 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       |       |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-91 de.htwg.se.mastermind.view.tui - 
-New game has been created!
-INFO play-akka.actor.default-dispatcher-91 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-91 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-91 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | yl    |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[1] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | yl yl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[0] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-|       | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [0],[0] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |       |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Row [0] confirmed!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |    yl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       |    bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[0] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | yl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-|       | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-The cell at [1],[1] has been set!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |       |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Row [1] confirmed!
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    yl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       |    bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[0] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | yl bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | bl bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | gr bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | xx xx |
-+-------+-------+
-|       | rd bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-The cell at [2],[1] has been set!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | rd bl |
-+-------+-------+
-| bk bk | rd bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-You have won!!
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-102 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-        +-------+
-        | rd bl |
-+-------+-------+
-| bk bk | rd bl |[2]
-| bk    | bl bl |[1]
-| bk    | yl bl |[0]
-+-------+-------+
-          [1][0]
-
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Solution is shown
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-103 de.htwg.se.mastermind.view.tui - 
-Please enter command: 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
                     +-------------------+
                     | xx xx xx xx xx xx |
 +-------------------+-------------------+
@@ -1230,17 +40,17 @@ INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui -
 +-------------------+-------------------+
                       [5][4][3][2][1][0]
 
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Welcome to Mastermind!!
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-99 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
 Please enter command: 
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
                     +-------------------+
-                    | pk pu pu or rd bl |
+                    | rd gr bl bl yl rd |
 +-------------------+-------------------+
 |                   |                   |[10]
 |                   |                   |[9]
@@ -1256,15 +66,583 @@ INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui -
 +-------------------+-------------------+
                       [5][4][3][2][1][0]
 
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
 Solution is shown
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
 Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
 Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
 Please enter command: 
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | xx xx xx xx |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
+Welcome to Mastermind!!
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-479 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu gr pu yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Solution is shown
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | xx xx xx xx |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+New game has been created!
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-475 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-474 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-474 de.htwg.se.mastermind.view.tui - 
+Solution is shown
+INFO play-akka.actor.default-dispatcher-474 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-474 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-474 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |          yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+The cell at [0],[0] has been set!
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |       yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+The cell at [0],[1] has been set!
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |    yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+The cell at [0],[2] has been set!
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+The cell at [0],[3] has been set!
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-491 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Row [0] confirmed!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |          yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [1],[0] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |       yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [1],[1] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |    yl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [1],[2] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             | yl yl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [1],[3] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [1],[2] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Row [1] confirmed!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |          yl |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [2],[0] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |       yl yl |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [2],[1] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |    yl yl yl |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [2],[2] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             | yl yl yl yl |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+The cell at [2],[3] has been set!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | pu yl or yl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+| bk bk       | yl yl yl yl |[2]
+| bk wh       | yl bl yl yl |[1]
+| bk bk       | yl yl yl yl |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Row [2] confirmed!
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-495 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-517 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | xx xx xx xx |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-517 de.htwg.se.mastermind.view.tui - 
+Welcome to Mastermind!!
+INFO play-akka.actor.default-dispatcher-517 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-517 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-517 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | or bl yl bl |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Solution is shown
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | xx xx xx xx |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+New game has been created!
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-529 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | or pu gr pk |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Solution is shown
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+              +-------------+
+              | xx xx xx xx |
++-------------+-------------+
+|             |             |[6]
+|             |             |[5]
+|             |             |[4]
+|             |             |[3]
+|             |             |[2]
+|             |             |[1]
+|             |             |[0]
++-------------+-------------+
+                [3][2][1][0]
+
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Welcome to Mastermind!!
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-527 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-525 de.htwg.se.mastermind.view.tui - 
+        +-------+
+        | xx xx |
++-------+-------+
+|       |       |[2]
+|       |       |[1]
+|       |       |[0]
++-------+-------+
+          [1][0]
+
+INFO play-akka.actor.default-dispatcher-525 de.htwg.se.mastermind.view.tui - 
+Welcome to Mastermind!!
+INFO play-akka.actor.default-dispatcher-525 de.htwg.se.mastermind.view.tui - 
+Available Colors: yl, gr, rd, bl, or, pk, pu
+INFO play-akka.actor.default-dispatcher-525 de.htwg.se.mastermind.view.tui - 
+Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
+INFO play-akka.actor.default-dispatcher-525 de.htwg.se.mastermind.view.tui - 
+Please enter command: 
+INFO play-akka.actor.default-dispatcher-524 de.htwg.se.mastermind.view.tui - 
                     +-------------------+
                     | xx xx xx xx xx xx |
 +-------------------+-------------------+
@@ -1282,11 +660,11 @@ INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui -
 +-------------------+-------------------+
                       [5][4][3][2][1][0]
 
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
-New game has been created!
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-524 de.htwg.se.mastermind.view.tui - 
+Welcome to Mastermind!!
+INFO play-akka.actor.default-dispatcher-524 de.htwg.se.mastermind.view.tui - 
 Available Colors: yl, gr, rd, bl, or, pk, pu
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-524 de.htwg.se.mastermind.view.tui - 
 Possible Commands: n-new, q-quit, c-confirm row, xyco-set a color at x, y, s-show solution, zn-sets the size
-INFO play-akka.actor.default-dispatcher-104 de.htwg.se.mastermind.view.tui - 
+INFO play-akka.actor.default-dispatcher-524 de.htwg.se.mastermind.view.tui - 
 Please enter command: 
