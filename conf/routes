@@ -4,7 +4,6 @@
 
 # Home page
 GET     /                           controllers.MainController.index()
-GET 	/command/:commandline		controllers.MainController.commandline(commandline:String)
 GET 	/getGameGrid				controllers.MainController.getGameGrid()
 GET 	/showSolution				controllers.MainController.showSolution()
 GET		/setValue/:r/:c/:val		controllers.MainController.setValue(r: Integer, c: Integer, val: String)
@@ -19,6 +18,7 @@ GET     /getActualRow               controllers.MainController.getActualRow()
 GET     /getStickGrid               controllers.MainController.getStickGrid()
 GET     /newGame                    controllers.MainController.newGame()
 GET     /isSolved                   controllers.MainController.isSolved()
+GET     /auth                       controllers.MainController.auth()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

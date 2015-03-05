@@ -9,7 +9,7 @@ angular.module('mastermindApp', ['ui.router'])
             .state('welcome', {
                 url: '/',
                 templateUrl: 'assets/partials/home.html'
-                //controller: 'MasterCtrl'
+                //controller: 'AuthCtrl'
             })
             .state('game', {
                 url: '/game',

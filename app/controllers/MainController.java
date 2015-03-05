@@ -13,6 +13,10 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.awt.*;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class MainController extends Controller {
 
@@ -21,11 +25,22 @@ public class MainController extends Controller {
     public static Result index() {
 		return ok(views.html.index.render("HTWG Mastermind", controller));
     }
-    
-    public static Result commandline(String command) {
-    	Mastermind.getInstance().getTUI().processInputLine(command);
-    	return ok(views.html.index.render("Got your command "+ command, controller));
-    }
+
+	public static Result auth() {
+		final String CLIENT_ID = "949119415800-veiff8ej76e2jectuf5hr5gt6ono43ug.apps.googleusercontent.com";
+		final String APPLICATION_NAME = "mastermind";
+
+		String state = new BigInteger(130, new SecureRandom()).toString(32);
+		session("state", state);
+
+		Map m1 = new LinkedHashMap();
+
+		m1.put("client_id", CLIENT_ID);
+		m1.put("state", state);
+		m1.put("application_name", APPLICATION_NAME);
+
+		return ok(Json.toJson(m1));
+	}
 
     public static Result getGameGrid() {
     	IGrid grid = controller.getGrid();
