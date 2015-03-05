@@ -45,8 +45,6 @@
 		<div class="col-md-3">
 		</div>
 		<div class="col-md-1">
-			<!--<div id="btnConfirmRow" class="create-button btn btn-default" ng-click="confirmRow()">Confirm Row</div>-->
-			<!--<button id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>-->
 			<button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
 		</div>
 		<div class="col-md-2 ">
@@ -56,11 +54,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
 				<div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">
 					<div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
 				</div>
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div class="row" ng-repeat="val in gameArray" ng:init="parentIndex=$index">
+				<div id="rightWrong" class="glyphicon glyphicon-ok" style="display:none"></div>
 			</div>
 		</div>
 	</div>

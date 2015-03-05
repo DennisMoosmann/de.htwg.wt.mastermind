@@ -172,11 +172,43 @@
             $scope.solved = conf[1];
             $scope.actualRow = conf[2];
 
+            var row = $scope.rowsAmount - 2 - $scope.actualRow;
+
             if (conf[0] == "true") {
                 if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
                     $scope.setButtonPosition(false);
+                    for (var i = row + 1; i <= $scope.rowsAmount - 2; i++) {
+                        if (i == row + 1) {
+                            rightWrong[i].className = "glyphicon glyphicon-remove";
+                            rightWrong[i].style.display = "";
+                            rightWrong[i].style.marginTop = (parseInt($scope.buttonPosition) + 65) + "px";
+                        } else {
+                            rightWrong[i].style.marginTop = "30px";
+                        }
+                    }
+                } else if ($scope.solved == "true") {
+                    btnConfirmRow.disabled = true;
+                    for (var i = row + 1; i <= $scope.rowsAmount - 2; i++) {
+                        if (i == row + 1) {
+                            rightWrong[i].className = "glyphicon glyphicon-ok";
+                            rightWrong[i].style.display = "";
+                            rightWrong[i].style.marginTop = (parseInt($scope.buttonPosition) + 17) + "px";
+                        } else {
+                            rightWrong[i].style.marginTop = "30px";
+                        }
+                    }
+                    $scope.showSolution("false");
                 } else {
                     btnConfirmRow.disabled = true;
+                    for (var i = row + 1; i <= $scope.rowsAmount - 2; i++) {
+                        if (i == row + 1) {
+                            rightWrong[i].className = "glyphicon glyphicon-remove";
+                            rightWrong[i].style.display = "";
+                            rightWrong[i].style.marginTop = (parseInt($scope.buttonPosition) + 17) + "px";
+                        } else {
+                            rightWrong[i].style.marginTop = "30px";
+                        }
+                    }
                     $scope.showSolution("false");
                 }
             }
