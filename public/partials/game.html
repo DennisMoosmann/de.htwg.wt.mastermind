@@ -46,11 +46,12 @@
 		</div>
 		<div class="col-md-1">
 			<!--<div id="btnConfirmRow" class="create-button btn btn-default" ng-click="confirmRow()">Confirm Row</div>-->
-			<button id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
+			<!--<button id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>-->
+			<button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
 		</div>
 		<div class="col-md-2 ">
 			<div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng:init="parentIndex=$index">
-				<div id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
+				<div ng-id="stickBa" id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
 					<div id="ball" class={{y}}></div>
 				</div>
 			</div>
