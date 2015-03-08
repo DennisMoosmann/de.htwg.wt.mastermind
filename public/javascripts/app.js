@@ -6,10 +6,10 @@ angular.module('mastermindApp', ['ui.router'])
     .config(function($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider
-            .state('welcome', {
+            .state('home', {
                 url: '/',
-                templateUrl: 'assets/partials/home.html'
-                //controller: 'AuthCtrl'
+                templateUrl: 'assets/partials/home.html',
+                controller: 'AuthCtrl'
             })
             .state('game', {
                 url: '/game',

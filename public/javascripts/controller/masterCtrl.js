@@ -1,4 +1,4 @@
- angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService) {
+ angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService) {
 
     $scope.init = function() {
         $scope.getStatus();
