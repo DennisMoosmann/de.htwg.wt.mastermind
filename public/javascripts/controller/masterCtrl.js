@@ -22,15 +22,15 @@
     $scope.setButtonPosition = function(initial) {
         if (initial) {
             var marginMul = ($scope.rowsAmount - 1) * 2;
-            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) + 3) + "px";
-            btnConfirmRow.style.marginTop = buttonPos;
+            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 5) + "px";
+            hr2.style.marginTop = buttonPos;
             $scope.buttonPosition = buttonPos;
 
         } else {
             var tempPos = $scope.buttonPosition.toString();
             tempPos = parseInt(tempPos);
             var newPos = (tempPos - 50) + "px";
-            btnConfirmRow.style.marginTop = newPos;
+            hr2.style.marginTop = newPos;
             $scope.buttonPosition = newPos;
         }
     };
