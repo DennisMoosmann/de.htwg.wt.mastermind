@@ -1,4 +1,4 @@
-.navbar .navbar-nav{
+.navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
@@ -18,11 +18,6 @@
 
 #loggedInMail {
     margin-left: 25px;
-}
-
-#content {
-	margin: 20px auto;
-	width:970px;
 }
 
 #game-head {

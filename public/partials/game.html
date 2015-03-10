@@ -1,71 +1,74 @@
-<div id="game-navbar">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid navbar-mastermind">
-            <div class="navbar-header">
-                <a class="navbar-brand">Mastermind</a>
+<div class="container">
+    <div id="game-navbar">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid navbar-mastermind">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Mastermind</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="" ng-click="newGame()">New game</a></li>
+                        <li><a href="" ng-click="showSolution('true')">Show solution</a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="" ng-click="resetSize(12,12)">12*12</a></li>
+                                <li><a href="" ng-click="resetSize(8, 8)">8*8</a></li>
+                                <li><a href="" ng-click="resetSize(4,4)">4*4</a></li>
+                            </ul>
+                        </li>
+                        <li><a id="loggedInMail">Logged in as: {{userMail}}</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="" ng-click="newGame()">New game</a></li>
-                    <li><a href="" ng-click="showSolution('true')">Show solution</a></li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="" ng-click="resetSize(12,12)">12*12</a></li>
-                            <li><a href="" ng-click="resetSize(8, 8)">8*8</a></li>
-                            <li><a href="" ng-click="resetSize(4,4)">4*4</a></li>
-                        </ul>
-                    </li>
-                    <li><a id="loggedInMail">Logged in as: {{userMail}}</a></li>
-                </ul>
+        </nav>
+    </div>
+    <div id="game-head" >
+        <div class="container">
+            <div class="col-md-6">
+                <div id="game-status" >
+                    <label id="status">{{status}}</label>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
-<div id="game-head" >
-    <div class="container">
-        <div class="col-md-6">
-            <div id="game-status" >
-                <label id="status">{{status}}</label>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div id="game-mastercolors" class="bs-docs-header">
-                <div class="container">
-                    <div ng-repeat="color in masterColors track by $index" style="float:left;">
-                        <div id="masters" class={{color}}></div>
+            <div class="col-md-6">
+                <div id="game-mastercolors" class="bs-docs-header">
+                    <div class="container">
+                        <div ng-repeat="color in masterColors track by $index" style="float:left;">
+                            <div id="masters" class={{color}}></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</br>
-<div id="game-gamefield" class="bs-docs-header">
-    <div class="container">
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-1">
-            <button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
-        </div>
-        <div class="col-md-2">
-            <div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng:init="parentIndex=$index">
-                <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
-                    <div id="ball" class={{y}}></div>
+    </br>
+    <div id="game-gamefield" class="bs-docs-header">
+        <div class="container">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-1">
+                <button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
+            </div>
+            <div class="col-md-2">
+                <div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng:init="parentIndex=$index">
+                    <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
+                        <div id="ball" class={{y}}></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-5">
-            <div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
-                <div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">
-                    <div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+            <div class="col-md-5">
+                <div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng:init="parentIndex=$index">
+                    <div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">
+                        <div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-1">
-            <div class="row" ng-repeat="val in gameArray" ng:init="parentIndex=$index">
-                <div id="rightWrong" class="glyphicon glyphicon-ok" style="display:none"></div>
+            <div class="col-md-1">
+                <div class="row" ng-repeat="val in gameArray" ng:init="parentIndex=$index">
+                    <div id="rightWrong" class="glyphicon glyphicon-ok" style="display:none"></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+

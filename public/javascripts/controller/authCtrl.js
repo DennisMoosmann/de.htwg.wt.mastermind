@@ -17,11 +17,11 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
         AuthService.loginWithCredentials(name, password)
             .error(function() {
                 $rootScope.isSignedIn = true;
-                $state.go('welcome');
+                $state.go('game');
             })
             .then(function() {
                 $rootScope.isSignedIn = true;
-                $state.go('welcome');
+                $state.go('game');
             });
         $rootScope.userMail = name;
     };

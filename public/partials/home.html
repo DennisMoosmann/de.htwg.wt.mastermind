@@ -1,17 +1,45 @@
 <div class="welcome-header">
-    <h1>Mastermind!</h1>
+    <div class="container">
+        <div class="col-md-5">
+            <p class="game-text">HTWG Mastermind</p>
+        </div>
+        <div class="col-md-4 col-md-offset-3">
+            <div class="github">
+                <div class="github-image">
+                    <a href="https://github.com/DennisMoosmann/de.htwg.wt.mastermind" target="_blank">
+                        <img width="130" height="100" border="0" src="assets/images/github.png"
+                        class="carbonad-image carbonad-img" style="max-width:130px;">
+                    </a>
+                </div>
+                <div class="github-text">
+                    <a href="https://github.com/DennisMoosmann/de.htwg.wt.mastermind" class="github-link">
+                        <small>Lookup source code on</small>
+                        </br>
+                        <big>GitHub!</big>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="welcome-text">
-    <p>This is a webapplication of the board game "Mastermind" which was developed by Dennis Moosmann & Simon Braun
-        at the University of Applied Science in Constance. To play the game you must sign in with your Google+
-        account! To see the source code of the game please click on the button on the right hand side! We hope
-        you will enjoy!
-    </p>
+    <div class="container">
+        <h1>Hello and welcome!</h1>
+    </div>
+</div>
+
+</div>
+<div class="info-text">
+    <div class="container">
+        <p>This is a webapplication of the board game "Mastermind" which was developed by Dennis Moosmann & Simon Braun
+            at the <strong>University of Applied Science</strong> in Constance. To play the game you can either sign in with
+            your <strong>Google+</strong> account or with a fake account! We hope you will enjoy!
+        </p>
+    </div>
 </div>
 <div class="container">
     <div class="col-md-4 col-md-offset-4">
         <form method="post" action="#" role="login">
-            <!--<img src="http://www.ubergizmo.com/wp-content/uploads/2015/03/Google-Plus-Logo.png" class="img-responsive" alt="">-->
             <div id="btnGoogle"></div>
             <input type="email" ng-model="email" name="email" placeholder="Email" required="" class="form-control input-lg">
             <input type="password" class="form-control input-lg" id="password" placeholder="Password" required=""><ul class="error-list"></ul>

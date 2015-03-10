@@ -1,18 +1,49 @@
 .welcome-header {
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 20px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    background-color: #ff6;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
+    background-color: #69C73A;
+    color: white;
+}
+
+.game-text {
+    font-size: 400%;
 }
 
 .welcome-text {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 120%;
+    margin-top: 30px;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
-#btnGoogle {
-    margin-top: 100px;
+.info-text {
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+.github {
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.github-image {
+    display: inline-block;
+    padding: 15px!important;
+    background: transparent url(assets/images/github.png) 0 0 no-repeat;
+}
+
+.github-text {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.github-link {
+    color: white;
+}
+
+.github-link:hover  {
+    color: white;
 }
 
 form[role=login] img {
@@ -36,9 +67,4 @@ form[role=login] {
 form[role=login] input, form[role=login] button {
     font-size: 18px;
     margin: 16px 0;
-}
-
-form[role=login] a {
-    display: block;
-    text-align: center;
 }
