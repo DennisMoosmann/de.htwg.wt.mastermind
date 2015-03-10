@@ -8,8 +8,13 @@
         $scope.getActualRow();
         $scope.getRowsAmount();
         $scope.getColumnsAmount();
-        $scope.solved = "false";
+        //$scope.solved = "false";
         $scope.isShown = false;
+        $scope.isSolved();
+
+        if ($scope.userMail == null) {
+            $scope.userMail = localStorage.getItem('userMail');
+        }
     };
 
     $scope.getStatus = function() {
@@ -20,8 +25,22 @@
     };
 
     $scope.setButtonPosition = function(initial) {
-        if (initial) {
+        if (initial == 0) {
             var marginMul = ($scope.rowsAmount - 1) * 2;
+            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 5) + "px";
+            hr2.style.marginTop = buttonPos;
+            $scope.buttonPosition = buttonPos;
+        } else if (initial == 1) {
+            var newRow;
+            var tempSolved = localStorage.getItem('isSolved');
+            if (tempSolved == "true") {
+                newRow = $scope.rowsAmount - localStorage.getItem('actualRow');
+                btnConfirmRow.disabled = true;
+            } else {
+                newRow = $scope.rowsAmount - 1 - localStorage.getItem('actualRow');
+            }
+
+            var marginMul = ((newRow) * 2);
             var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 5) + "px";
             hr2.style.marginTop = buttonPos;
             $scope.buttonPosition = buttonPos;
@@ -76,6 +95,7 @@
         MasterService.getActualRow().then(function(response) {
             var actualRow = response.data;
             $scope.actualRow = actualRow;
+            localStorage.setItem('actualRow', actualRow);
         });
     };
 
@@ -83,7 +103,8 @@
         MasterService.getRowsAmount().then(function(response) {
             var rowsAmount = response.data;
             $scope.rowsAmount = rowsAmount;
-            $scope.setButtonPosition(true);
+            $scope.setButtonPosition(1);
+            localStorage.setItem('userMail', $scope.userMail);
         });
     };
 
@@ -96,9 +117,11 @@
 
 	$scope.newGame = function() {
 		MasterService.newGame().then(function() {
+		    localStorage.setItem('isSolved', "false");
+            localStorage.setItem('actualRow', 0);
 		    $scope.init();
 		    btnConfirmRow.disabled = false;
-		    $scope.setButtonPosition(true);
+		    $scope.setButtonPosition(0);
 		});
 	};
 
@@ -171,10 +194,12 @@
             $scope.getStickGrid();
             $scope.solved = conf[1];
             $scope.actualRow = conf[2];
+            localStorage.setItem('isSolved', $scope.solved);
+            localStorage.setItem('actualRow', $scope.actualRow);
 
             if (conf[0] == "true") {
                 if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
-                    $scope.setButtonPosition(false);
+                    $scope.setButtonPosition(2);
                     $scope.setRightWrong("glyphicon glyphicon-remove", 65);
                 } else if ($scope.solved == "true") {
                     btnConfirmRow.disabled = true;
@@ -190,7 +215,7 @@
     };
 
     $scope.setRightWrong =  function(className, margin) {
-        var row = $scope.rowsAmount - 2 - $scope.actualRow;
+        var row = $scope.rowsAmount - 2 - localStorage.getItem('actualRow');
         for (var i = row + 1; i <= $scope.rowsAmount - 2; i++) {
             if (i == row + 1) {
                 rightWrong[i].className = className;
@@ -206,14 +231,17 @@
         MasterService.isSolved().then(function(response) {
             var isSolved = response.data;
             $scope.solved = isSolved;
+            localStorage.setItem('isSolved', isSolved);
         });
     };
 
     $scope.resetSize = function(rows, cols) {
         MasterService.resetSize(rows, cols).then(function(response) {
+            localStorage.setItem('isSolved', "false");
+            localStorage.setItem('actualRow', 0);
             $scope.init();
             btnConfirmRow.disabled = false;
-            $scope.setButtonPosition(true);
+            $scope.setButtonPosition(0);
         });
     };
 
