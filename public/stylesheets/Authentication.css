@@ -46,6 +46,10 @@
     color: white;
 }
 
+.github-link:visited  {
+    color: white;
+}
+
 form[role=login] img {
     display: block;
     margin: 0 auto;
@@ -67,4 +71,9 @@ form[role=login] {
 form[role=login] input, form[role=login] button {
     font-size: 18px;
     margin: 16px 0;
+}
+
+.btn-primary {
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
+    height: 40px;
 }

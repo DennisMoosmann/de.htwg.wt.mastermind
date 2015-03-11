@@ -14,16 +14,13 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
     };
 
     $scope.login = function(name, password) {
-        AuthService.loginWithCredentials(name, password)
-            .error(function() {
-                $rootScope.isSignedIn = true;
-                $state.go('game');
-            })
-            .then(function() {
-                $rootScope.isSignedIn = true;
-                $state.go('game');
-            });
-        $rootScope.userMail = name;
+        if (name != null) {
+            $rootScope.userMail = name;
+            $rootScope.isSignedIn = true;
+            $state.go('game');
+        } else {
+            //dlg = $dialogs.error('This is my error message');
+        }
     };
 
     $scope.authCallback = function(authResult) {

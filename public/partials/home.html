@@ -12,7 +12,7 @@
                     </a>
                 </div>
                 <div class="github-text">
-                    <a href="https://github.com/DennisMoosmann/de.htwg.wt.mastermind" class="github-link">
+                    <a href="https://github.com/DennisMoosmann/de.htwg.wt.mastermind" class="github-link" target="_blank">
                         <small>Lookup source code on</small>
                         </br>
                         <big>GitHub!</big>
@@ -41,9 +41,9 @@
     <div class="col-md-4 col-md-offset-4">
         <form method="post" action="#" role="login">
             <div id="btnGoogle"></div>
-            <input type="email" ng-model="email" name="email" placeholder="Email" required="" class="form-control input-lg">
+            <input type="email" ng-model="userMail" name="email" placeholder="Email" required="" class="form-control input-lg">
             <input type="password" class="form-control input-lg" id="password" placeholder="Password" required=""><ul class="error-list"></ul>
-            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="signIn()">Sign in</button>
+            <div class="btn btn-block btn-primary" ng-click="login(userMail, password)">Sign in</div>
         </form>
     </div>
 </div>

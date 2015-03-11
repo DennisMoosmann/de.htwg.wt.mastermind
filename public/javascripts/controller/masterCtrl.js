@@ -41,7 +41,12 @@
                 newRow = $scope.rowsAmount - localStorage.getItem('actualRow');
                 btnConfirmRow.disabled = true;
             } else {
-                newRow = $scope.rowsAmount - 1 - localStorage.getItem('actualRow');
+                if ($scope.rowsAmount - 1 == localStorage.getItem('actualRow')) {
+                    newRow = $scope.rowsAmount - localStorage.getItem('actualRow');
+                    btnConfirmRow.disabled = true;
+                } else {
+                    newRow = $scope.rowsAmount - 1 - localStorage.getItem('actualRow');
+                }
             }
 
             var marginMul = ((newRow) * 2);

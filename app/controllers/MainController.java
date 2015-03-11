@@ -184,4 +184,18 @@ public class MainController extends Controller {
     public static Result signIn(String mail, String password) {
         return ok();
     }
+
+    public static WebSocket<String> webSocket() {
+        return new WebSocket<String>() {
+            public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
+                /*in.onMessage(new Callback<String>() {
+                    public void invoke(String event) { … }
+                });
+                in.onClose(new Callback0() {
+                    public void invoke() { … }
+                });
+                out.write("Hello!");*/
+            }
+        };
+    }
 }
