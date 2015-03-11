@@ -16,8 +16,13 @@
 	width: 1000px;
 }
 
-#loggedInMail {
-    margin-left: 25px;
+.navbar-right {
+    float: right!important;
+}
+
+.popover {
+    max-width: 800px;
+    width: 800px;
 }
 
 #game-head {
@@ -55,6 +60,16 @@
 }
 
 hr#hr1 {
+    width: 98%;
+    height: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#69C73A;
+    color:#69C73A;
+    border: 0 none;
+}
+
+hr#hr3 {
     width: 98%;
     height: 8px;
     margin-left: auto;

@@ -1,5 +1,9 @@
  angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService) {
 
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
     $scope.init = function() {
         $scope.getStatus();
         $scope.getMastermindColors();
@@ -200,15 +204,15 @@
             if (conf[0] == "true") {
                 if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
                     $scope.setButtonPosition(2);
-                    $scope.setRightWrong("glyphicon glyphicon-remove", 65);
+                    //$scope.setRightWrong("glyphicon glyphicon-remove", 65);
                 } else if ($scope.solved == "true") {
                     btnConfirmRow.disabled = true;
                     $scope.showSolution("false");
-                    $scope.setRightWrong("glyphicon glyphicon-ok", 17);
+                    //$scope.setRightWrong("glyphicon glyphicon-ok", 17);
                 } else {
                     btnConfirmRow.disabled = true;
                     $scope.showSolution("false");
-                    $scope.setRightWrong("glyphicon glyphicon-remove", 17);
+                    //$scope.setRightWrong("glyphicon glyphicon-remove", 17);
                 }
             }
         });

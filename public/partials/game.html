@@ -17,6 +17,13 @@
                                 <li><a href="" ng-click="resetSize(4,4)">4*4</a></li>
                             </ul>
                         </li>
+                        <li><a id="linkInstructions" href="" data-toggle="popover" title="Instructions"
+                               data-content="Can you guess the hidden 'Mastercolors' in the right order? Click on the
+                               balls of the actual row to choose a color. If your done click 'Confirm row'. The small balls
+                               will give you information about your choice: <b>WHITE:</b> right color on wrong place <b>BLACK:</b> right color on right place"
+                               data-trigger="focus" data-html="true" data-placement="bottom" container="body">Instructions</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a id="loggedInMail">Logged in as: {{userMail}}</a></li>
                     </ul>
                 </div>
@@ -25,6 +32,7 @@
     </div>
     <div id="game-head">
         <hr id="hr1">
+
         <div class="col-md-6">
             <div id="game-status" >
                 <p>STATE</p>
@@ -70,12 +78,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1">
-                <div class="row" ng-repeat="val in gameArray" ng:init="parentIndex=$index">
-                    <div id="rightWrong" class="glyphicon glyphicon-ok" style="display:none"></div>
-                </div>
-            </div>
+            <!--<div class="col-md-1">-->
+                <!--<div class="row" ng-repeat="val in gameArray" ng:init="parentIndex=$index">-->
+                    <!--<div id="rightWrong" class="glyphicon glyphicon-ok" style="display:none"></div>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
+    <hr id="hr3">
 </div>
 
