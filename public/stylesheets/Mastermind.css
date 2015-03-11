@@ -1,3 +1,5 @@
+/*Navigation bar*/
+
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -25,6 +27,9 @@
     width: 800px;
 }
 
+
+/*Game head*/
+
 #game-head {
    border-radius: 3px;
 }
@@ -36,10 +41,12 @@
     border-style: solid;
     padding: 10px;
     height: 80px;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 #status {
     text-align: center;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 #game-mastercolors {
@@ -49,6 +56,7 @@
     border-width: 1px;
     border-style: solid;
     padding: 10px;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 #masters {
@@ -59,41 +67,8 @@
     border-style: solid;
 }
 
-hr#hr1 {
-    width: 98%;
-    height: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#69C73A;
-    color:#69C73A;
-    border: 0 none;
-}
 
-hr#hr3 {
-    width: 98%;
-    height: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#69C73A;
-    color:#69C73A;
-    border: 0 none;
-}
-
-hr#hr2 {
-    width: 1000%;
-    height: 2px;
-    margin-left: auto;
-    background-color:#69C73A;
-    color:#69C73A;
-    border: 0 none;
-    margin-top: 0px;
-    margin-bottom: 6px;
-}
-
-.game-mastercolors-center {
-    width: 300px;
-    margin: 0 auto;
-}
+/*Game field*/
 
 #game-gamefield {
     background: #f8f8f8;
@@ -105,18 +80,15 @@ hr#hr2 {
     margin-right: 15px;
 }
 
+.game-mastercolors-center {
+    width: 300px;
+    margin: 0 auto;
+}
+
 .game-balls-center {
     width: 300px;
     margin: 0 auto;
     padding-bottom: 10px;
-}
-
-.glyphicon-ok {
-    color: green;
-}
-
-.glyphicon-remove {
-    color: red;
 }
 
 #ball {
@@ -136,6 +108,10 @@ hr#hr2 {
 
 #stick-balls {
     margin-left:80px;
+}
+
+.btn-success {
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 .xx {
@@ -180,4 +156,46 @@ hr#hr2 {
 
 .bk {
     background: black;
+}
+
+
+/*Copyright*/
+
+.copyright {
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
+}
+
+
+/*Horicontal lines*/
+
+hr#hr1 {
+    width: 98%;
+    height: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#69C73A;
+    color:#69C73A;
+    border: 0 none;
+}
+
+hr#hr2 {
+    width: 1000%;
+    height: 2px;
+    margin-left: auto;
+    background-color:#69C73A;
+    color:#69C73A;
+    border: 0 none;
+    margin-top: 0px;
+    margin-bottom: 6px;
+}
+
+hr#hr3 {
+    width: 98%;
+    height: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:#69C73A;
+    color:#69C73A;
+    border: 0 none;
 }
