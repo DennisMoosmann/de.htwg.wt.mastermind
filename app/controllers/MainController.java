@@ -6,6 +6,7 @@ import de.htwg.se.mastermind.controller.IController;
 import de.htwg.se.mastermind.model.IGrid;
 import play.*;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import play.libs.F;
 import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
@@ -185,17 +186,14 @@ public class MainController extends Controller {
         return ok();
     }
 
-    public static WebSocket<String> webSocket() {
+    public static WebSocket<String> connectWebSocket() {
         return new WebSocket<String>() {
+
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-                /*in.onMessage(new Callback<String>() {
-                    public void invoke(String event) { … }
-                });
-                in.onClose(new Callback0() {
-                    public void invoke() { … }
-                });
-                out.write("Hello!");*/
+                out.write("Hello");
             }
+
         };
+
     }
 }
