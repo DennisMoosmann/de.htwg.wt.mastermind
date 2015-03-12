@@ -1,4 +1,4 @@
- angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService) {
+ angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService, WebsocketService) {
 
     $(function () {
       $('[data-toggle="popover"]').popover()
@@ -255,4 +255,5 @@
     };
 
     $scope.init();
+    WebsocketService.connect(onMessage);
  });
