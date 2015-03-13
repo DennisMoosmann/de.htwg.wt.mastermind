@@ -191,7 +191,7 @@
 
 				MasterService.setValue(row, newCol, value).then(function(response) {
 				    $scope.getStatus();
-				    WebsocketService.connect(onMessage);
+				    //WebsocketService.connect(onMessage);
 				});
 			}
    		}
