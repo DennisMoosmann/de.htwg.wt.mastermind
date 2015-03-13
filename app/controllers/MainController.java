@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import play.libs.F;
 import play.libs.Json;
 import play.mvc.*;
+import play.mvc.WebSocket;
 import views.html.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import java.awt.*;
@@ -20,6 +21,7 @@ import java.util.Map;
 public class MainController extends Controller {
 
     static IController controller = Mastermind.getInstance().getController();
+    private static Helper helper = new Helper(controller);
 
     public static Result index() {
         return ok(views.html.index.render("HTWG Mastermind", controller));
@@ -41,7 +43,7 @@ public class MainController extends Controller {
     }
 
     public static Result getGameGrid() {
-        IGrid grid = controller.getGrid();
+        /*IGrid grid = controller.getGrid();
         String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
         ObjectNode result = Json.newObject();
 
@@ -54,14 +56,17 @@ public class MainController extends Controller {
             }
             columnIndex = 0;
             rowIndex++;
-        }
+        }*/
 
+        //gameGrid = field;
+        ObjectNode result = Json.newObject();
+        String [][] field = helper.getGameField();
         result.put("gameGrid", Json.toJson(field));
         return ok(result);
     }
 
     public static Result getStickGrid() {
-        IGrid grid = controller.getGrid();
+        /*IGrid grid = controller.getGrid();
         int rowsAmount = (grid.getRowsAmount() - 1) * 2;
         int columnsAmount = grid.getRowsAmount()/4;
         String [][] field = new String[rowsAmount][columnsAmount];
@@ -81,8 +86,9 @@ public class MainController extends Controller {
                     rowIndex++;
                 }
             }
-        }
-
+        }*/
+        ObjectNode result = Json.newObject();
+        String [][] field = helper.getStickGrid();
         result.put("stickGrid", Json.toJson(field));
         return ok(result);
     }
@@ -190,8 +196,40 @@ public class MainController extends Controller {
         return new WebSocket<String>() {
 
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-                out.write("Hello");
+                ObjectNode result = Json.newObject();
+                String [][] field = helper.getGameField();
+                result.put("gameGrid", Json.toJson(field));
+                String [][] stickField = helper.getStickGrid();
+                result.put("stickGrid", Json.toJson(stickField));
+                out.write(result.toString());
+                //out.write("Main");
+                /*ObjectNode result = Json.newObject();
+
+                result.put("gameGrid", Json.toJson(gameGrid));
+                result.put("actualRow", Json.toJson(controller.getActualRow()));*/
+                //out.write(gameGrid.toString());
+
+                // For each event received on the socket,
+                /*in.onMessage(new F.Callback<String>() {
+                    public void invoke(String event) {
+                        out.write("Schwein");
+                        // Log events to the console
+                        //println(event);
+
+                    }
+                });*/
+                // For each event received on the socket,
+                /*in.onMessage(new Callback<String>() {
+                    public void invoke(String event) {
+                        //ontroller.showSolution();
+                        // Log events to the console
+                        //println(event);
+                        out.write("Schwein");
+
+                    }
+                });*/
             }
+
 
         };
 

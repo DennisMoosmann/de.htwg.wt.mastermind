@@ -1,10 +1,12 @@
-angular.module('mastermindApp').service('WebsocketService', function($http) {
+angular.module('mastermindApp')
 
+.service('WebsocketService', function($http) {
     var wsproto = 'ws://';
-    if (window.location.protocol === 'https:') {
+    if (window.location.protocol == 'https:') {
         wsproto = 'wss://';
     }
     var socketUrl = wsproto + location.host + '/connectWebSocket';
+    var ws;
 
     return {
         connect: function(onMessageFn) {
@@ -13,7 +15,7 @@ angular.module('mastermindApp').service('WebsocketService', function($http) {
             } else if (typeof onMessageFn !== "function") {
                 throw new Error('onMessageFn needs to be a function');
             }
-            var ws = new WebSocket(socketUrl);
+            ws = new WebSocket(socketUrl);
             ws.onmessage = onMessageFn;
             return ws;
         }

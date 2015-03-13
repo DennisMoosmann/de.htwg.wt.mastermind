@@ -142,6 +142,7 @@
                     $scope.getStatus();
                 }
                  $scope.isShown = true;
+                 WebsocketService.connect(onMessage);
 		    }
 		});
     };
@@ -190,6 +191,7 @@
 
 				MasterService.setValue(row, newCol, value).then(function(response) {
 				    $scope.getStatus();
+				    WebsocketService.connect(onMessage);
 				});
 			}
    		}
@@ -254,6 +256,31 @@
         });
     };
 
+    function onMessage(msg) {
+        var data = JSON.parse(msg.data);
+
+        var gameGrid = data.gameGrid;
+        angular.forEach(gameGrid, function(el, i){
+            angular.forEach(el, function(e, j) {
+                if (e == null) {
+                    gameGrid[i][j] = 'gy';
+                }
+            });
+        });
+        $scope.gameArray = gameGrid;
+
+        var stickGrid = data.stickGrid;
+        angular.forEach(stickGrid, function(el, i){
+            angular.forEach(el, function(e, j) {
+                if (e == null) {
+                    stickGrid[i][j] = 'gy';
+                }
+            });
+        });
+        $scope.stickArray = stickGrid;
+
+    }
+
     $scope.init();
     WebsocketService.connect(onMessage);
- });
+});
