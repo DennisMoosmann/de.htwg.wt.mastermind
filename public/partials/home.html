@@ -41,7 +41,7 @@
     <div class="col-md-4 col-md-offset-4">
         <form method="post" action="#" role="login">
             <div id="btnGoogle"></div>
-            <input type="email" ng-model="userMail" name="email" placeholder="Email" required="" class="form-control input-lg">
+            <input id="mail" type="email" ng-model="userMail" name="email" placeholder="Email" required="" class="form-control input-lg">
             <input type="password" class="form-control input-lg" id="password" placeholder="Password" required=""><ul class="error-list"></ul>
             <div class="btn btn-block btn-primary" ng-click="login(userMail, password)">Sign in</div>
         </form>

@@ -39,6 +39,30 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
         }
     };
 
+    //Prevent multiple '@-Signs'
+    $(function() {
+        var keys = {};
+        $('#mail').keydown(function(e) {
+            keys[e.which] = true;
+            if (keys[17] && keys[81]) {
+                var count = 0;
+                for (var i = 0; i < mail.value.length; i++) {
+                    if (mail.value[i] == '@') {
+                        count++;
+                    }
+                }
+
+                if (count > 0) {
+                    e.preventDefault();
+                }
+            }
+        });
+
+        $('#mail').keyup(function(e) {
+            delete keys[e.which];
+        });
+    });
+
     /*function afterShowAnimation(scope, element, options) {
         // post-show code here: DOM element focus, etc.
     }*/
