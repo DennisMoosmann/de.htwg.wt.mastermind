@@ -211,31 +211,15 @@
             if (conf[0] == "true") {
                 if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
                     $scope.setButtonPosition(2);
-                    //$scope.setRightWrong("glyphicon glyphicon-remove", 65);
                 } else if ($scope.solved == "true") {
                     btnConfirmRow.disabled = true;
                     $scope.showSolution("false");
-                    //$scope.setRightWrong("glyphicon glyphicon-ok", 17);
                 } else {
                     btnConfirmRow.disabled = true;
                     $scope.showSolution("false");
-                    //$scope.setRightWrong("glyphicon glyphicon-remove", 17);
                 }
             }
         });
-    };
-
-    $scope.setRightWrong =  function(className, margin) {
-        var row = $scope.rowsAmount - 2 - localStorage.getItem('actualRow');
-        for (var i = row + 1; i <= $scope.rowsAmount - 2; i++) {
-            if (i == row + 1) {
-                rightWrong[i].className = className;
-                rightWrong[i].style.display = "";
-                rightWrong[i].style.marginTop = (parseInt($scope.buttonPosition) + margin) + "px";
-            } else {
-                rightWrong[i].style.marginTop = "30px";
-            }
-        }
     };
 
     $scope.isSolved = function() {
@@ -278,6 +262,9 @@
             });
         });
         $scope.stickArray = stickGrid;
+
+        $scope.actualRow = data.actualRow;
+        //$scope.$apply();
 
     }
 

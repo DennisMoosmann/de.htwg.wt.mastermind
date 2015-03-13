@@ -201,6 +201,7 @@ public class MainController extends Controller {
                 result.put("gameGrid", Json.toJson(field));
                 String [][] stickField = helper.getStickGrid();
                 result.put("stickGrid", Json.toJson(stickField));
+                result.put("actualRow", Json.toJson(controller.getActualRow()));
                 out.write(result.toString());
                 //out.write("Main");
                 /*ObjectNode result = Json.newObject();
