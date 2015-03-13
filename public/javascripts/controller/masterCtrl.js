@@ -142,7 +142,7 @@
                     $scope.getStatus();
                 }
                  $scope.isShown = true;
-                 WebsocketService.connect(onMessage);
+                 //WebsocketService.connect(onMessage);
 		    }
 		});
     };
@@ -191,7 +191,7 @@
 
 				MasterService.setValue(row, newCol, value).then(function(response) {
 				    $scope.getStatus();
-				    WebsocketService.connect(onMessage);
+				    //WebsocketService.connect(onMessage);
 				});
 			}
    		}
@@ -269,5 +269,5 @@
     }
 
     $scope.init();
-    WebsocketService.connect(onMessage);
+    //WebsocketService.connect(onMessage);
 });
