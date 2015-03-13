@@ -269,5 +269,5 @@
     }
 
     $scope.init();
-    //WebsocketService.connect(onMessage);
+
 });
