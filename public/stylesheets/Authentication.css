@@ -34,7 +34,8 @@
 }
 
 .carbonad-img {
-    background: transparent url(../assets/images/github.png) 0 0 no-repeat;
+
+    /*background: transparent url(../assets/images/github.png) 0 0 no-repeat;*/
 }
 
 .github-text {
