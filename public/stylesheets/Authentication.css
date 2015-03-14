@@ -33,6 +33,10 @@
     /*background: transparent url(assets/images/github.png) 0 0 no-repeat;*/
 }
 
+.carbonad-img {
+    background: transparent url(../assets/images/github.png) 0 0 no-repeat;
+}
+
 .github-text {
     display: inline-block;
     margin-top: 5px;
