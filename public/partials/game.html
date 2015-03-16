@@ -66,11 +66,12 @@
                 <button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
             </div>
             <div class="col-md-2">
-                <div class="stick-balls-align">
+                <div class="stick-balls-align" id="grid">
                     <div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng-init="parentIndex=$index">
-                        <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:5px;margin-top:10px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
+                        <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:3px;margin-top:3px;margin-bottom:2.5px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
                             <div id="ball" class={{y}}></div>
                         </div>
+                        <hr id="hr4" ng-if="!(($index + 1) % 2) && !($last)"/>
                     </div>
                 </div>
             </div>

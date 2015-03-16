@@ -59,6 +59,11 @@
     font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
+.game-mastercolors-center {
+    width: 300px;
+    margin: 0 auto;
+}
+
 #masters {
     width:30px;
     height:30px;
@@ -86,10 +91,6 @@
     margin-left: -30px;
 }
 
-.game-mastercolors-center {
-    width: 300px;
-    margin: 0 auto;
-}
 
 .game-balls-center {
     width: 300px;
@@ -113,7 +114,20 @@
 }
 
 #stick-balls {
-    margin-left:80px;
+    /*margin-left:80px;*/
+    margin-left: 4px;
+    margin-bottom: 0px;
+
+}
+
+.stick-balls-align {
+    border-style: solid;
+    border-width: 1px;
+    width: 55px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 150px;
+    border-radius: 3px;
 }
 
 .btn-success {
@@ -205,3 +219,13 @@ hr#hr3 {
     color:#69C73A;
     border: 0 none;
 }
+
+hr#hr4 {
+    height: 1px;
+    margin-top: 23px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    margin-left: -4px;
+    background-color: black;
+}
+

@@ -29,9 +29,10 @@
     };
 
     $scope.setButtonPosition = function(initial) {
+        var marginMul;
         if (initial == 0) {
-            var marginMul = ($scope.rowsAmount - 1) * 2;
-            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 5) + "px";
+            marginMul = ($scope.rowsAmount - 1) * 2;
+            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 3) + "px";
             hr2.style.marginTop = buttonPos;
             $scope.buttonPosition = buttonPos;
         } else if (initial == 1) {
@@ -49,8 +50,8 @@
                 }
             }
 
-            var marginMul = ((newRow) * 2);
-            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 5) + "px";
+            marginMul = ((newRow) * 2);
+            var buttonPos = ((((marginMul - 2) * 15) + ((marginMul - 1) * 10)) - 3) + "px";
             hr2.style.marginTop = buttonPos;
             $scope.buttonPosition = buttonPos;
 
@@ -61,6 +62,7 @@
             hr2.style.marginTop = newPos;
             $scope.buttonPosition = newPos;
         }
+        $scope.calcGridLines();
     };
 
 	$scope.getMastermindColors = function() {
@@ -114,7 +116,27 @@
             $scope.rowsAmount = rowsAmount;
             $scope.setButtonPosition(1);
             localStorage.setItem('userMail', $scope.userMail);
+            $scope.calcGridLines();
         });
+    };
+
+    $scope.calcGridLines = function() {
+
+        var width;
+        if ($scope.rowsAmount == 12) {
+            grid.style.width = "70px";
+            width = "68px";
+        } else if ($scope.rowsAmount == 8) {
+            grid.style.width = "50px";
+            width = "48px";
+        } else {
+            grid.style.width = "32px";
+            width = "30px";
+        }
+
+        for (var i = 0; i < hr4.length; i++) {
+            hr4[i].style.width = width;
+        }
     };
 
     $scope.getColumnsAmount = function(){
