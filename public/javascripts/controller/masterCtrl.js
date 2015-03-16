@@ -1,9 +1,8 @@
  angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService, WebsocketService) {
 
-    $(function () {
-      $('[data-toggle="popover"]').popover()
-    })
-
+    /**
+        * @desc: creates new game
+    **/
     $scope.init = function() {
         $scope.getStatus();
         $scope.getMastermindColors();
@@ -12,7 +11,6 @@
         $scope.getActualRow();
         $scope.getRowsAmount();
         $scope.getColumnsAmount();
-        //$scope.solved = "false";
         $scope.isShown = false;
         $scope.isSolved();
 
@@ -21,6 +19,16 @@
         }
     };
 
+    /**
+        * @desc: shows instruction popover
+    **/
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
+    /**
+        * @desc: gets game status from server
+    **/
     $scope.getStatus = function() {
         MasterService.getStatus().then(function(response) {
         	var status = response.data;
@@ -28,6 +36,9 @@
         });
     };
 
+    /**
+        * @desc: sets the 'confirm row'-button on the position of the acrual row
+    **/
     $scope.setButtonPosition = function(initial) {
         var marginMul;
         if (initial == 0) {
