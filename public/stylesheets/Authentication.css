@@ -76,3 +76,15 @@ form[role=login] input, form[role=login] button {
     font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
     height: 40px;
 }
+
+/* Fix for Bootstrap 3 with Angular UI Bootstrap */
+
+/*.modal {
+	display: block;
+}*/
+
+/* Custom dialog/modal headers */
+
+/*.dialog-header-error { background-color: #d2322d; }
+.dialog-header-error span, .dialog-header-error h4,*/
+

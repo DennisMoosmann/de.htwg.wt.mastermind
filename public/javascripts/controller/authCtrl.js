@@ -39,7 +39,7 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
         }
     };
 
-    //Prevent multiple '@-Signs'
+    //Prevent multiple '@-Signs' in email
     $(function() {
         var keys = {};
         $('#mail').keydown(function(e) {
