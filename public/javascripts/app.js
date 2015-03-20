@@ -2,7 +2,7 @@
  * Main module of the application.
  */
 
-angular.module('mastermindApp', ['ui.router', 'ui.bootstrap', 'dialogs'])
+angular.module('mastermindApp', ['ui.router', 'ui.bootstrap'])
     .config(function($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider

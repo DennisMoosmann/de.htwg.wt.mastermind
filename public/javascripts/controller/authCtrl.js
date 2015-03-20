@@ -1,4 +1,4 @@
-angular.module('mastermindApp').controller('AuthCtrl', function($scope, $dialogs, $rootScope, $state, AuthService) {
+angular.module('mastermindApp').controller('AuthCtrl', function($scope, $modal, $rootScope, $state, AuthService) {
     $scope.auth = function() {
         AuthService.auth().then(function(response) {
             var signInOptParams = {
@@ -19,8 +19,20 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $dialogs
             $rootScope.isSignedIn = true;
             $state.go('game');
         } else {
-            dlg = $dialogs.error('This is my error message');
+            $scope.open();
         }
+    };
+
+    $scope.open = function (size) {
+          $modalInstance = $modal.open({
+          templateUrl: 'myModalContent.html',
+          controller: 'AuthCtrl',
+          size: size
+        });
+    };
+
+    $scope.ok = function () {
+        $modalInstance.close();
     };
 
     $scope.authCallback = function(authResult) {
