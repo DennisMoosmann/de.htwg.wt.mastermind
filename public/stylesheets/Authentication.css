@@ -77,24 +77,11 @@ form[role=login] input, form[role=login] button {
     height: 40px;
 }
 
-/* Fix for Bootstrap 3 with Angular UI Bootstrap */
+/*Error dialog*/
 
-/*.modal {
-	display: block;
-}*/
-
-/* Custom dialog/modal headers */
-
-/*.dialog-header-error { background-color: #d2322d; }
-.dialog-header-error span, .dialog-header-error h4,*/
-
-.modal {
-	display: block;
+.modal-header {
+    background: #d2322d;
+    color: white;
 }
 
-/* Custom dialog/modal headers */
-
-.dialog-header-error { background-color: #d2322d; }
-.dialog-header-error span, .dialog-header-error h4,
- { color: #ffffff; }
 

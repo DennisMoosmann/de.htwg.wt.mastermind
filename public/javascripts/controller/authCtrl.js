@@ -23,6 +23,7 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $modal, 
         }
     };
 
+    /*source: http://angular-ui.github.io/bootstrap/*/
     $scope.open = function (size) {
           $modalInstance = $modal.open({
           templateUrl: 'myModalContent.html',
