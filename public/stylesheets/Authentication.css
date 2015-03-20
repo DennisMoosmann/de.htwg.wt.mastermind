@@ -88,3 +88,13 @@ form[role=login] input, form[role=login] button {
 /*.dialog-header-error { background-color: #d2322d; }
 .dialog-header-error span, .dialog-header-error h4,*/
 
+.modal {
+	display: block;
+}
+
+/* Custom dialog/modal headers */
+
+.dialog-header-error { background-color: #d2322d; }
+.dialog-header-error span, .dialog-header-error h4,
+ { color: #ffffff; }
+

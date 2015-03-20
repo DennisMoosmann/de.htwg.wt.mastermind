@@ -1,4 +1,4 @@
-angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootScope, $state, AuthService) {
+angular.module('mastermindApp').controller('AuthCtrl', function($scope, $dialogs, $rootScope, $state, AuthService) {
     $scope.auth = function() {
         AuthService.auth().then(function(response) {
             var signInOptParams = {
@@ -19,7 +19,7 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
             $rootScope.isSignedIn = true;
             $state.go('game');
         } else {
-            //dlg = $dialogs.error('This is my error message');
+            dlg = $dialogs.error('This is my error message');
         }
     };
 
@@ -68,4 +68,5 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $rootSco
     }*/
 
     $scope.auth();
-});
+})
+;
