@@ -64,7 +64,7 @@
             <hr id="hr-login">
             <div class="login">
                 <p>Sign in with fake account:</p>
-                <input class="form-control input-lg" type="email" ng-model="userMail" ng-keydown="inputKeyDown($event)" placeholder="Email">
+                <input class="form-control input-lg" type="email" ng-model="userMail" ng-keydown="inputKeyDown($event)" placeholder="Email" autofocus>
                 <input class="form-control input-lg" type="password" ng-model="userPassword" ng-keydown="inputKeyDown($event)" placeholder="Password">
                 <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login(userMail, userPassword)">Sign in</button>
             </div>
