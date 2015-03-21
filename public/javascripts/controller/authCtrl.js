@@ -25,10 +25,10 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $modal, 
 
     /*source: http://angular-ui.github.io/bootstrap/*/
     $scope.open = function (size) {
-          $modalInstance = $modal.open({
-          templateUrl: 'myModalContent.html',
-          controller: 'AuthCtrl',
-          size: size
+        $modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'AuthCtrl',
+            size: size
         });
     };
 
@@ -76,10 +76,14 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $modal, 
         });
     });
 
-    /*function afterShowAnimation(scope, element, options) {
-        // post-show code here: DOM element focus, etc.
-    }*/
+    /**
+        desc: On press enter log in
+    **/
+    $scope.inputKeyDown = function(e) {
+        if (e.keyCode == 13) {
+            $scope.login($scope.userMail, $scope.userPassword);
+        }
+    };
 
     $scope.auth();
-})
-;
+});

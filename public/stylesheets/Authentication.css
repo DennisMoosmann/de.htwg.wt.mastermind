@@ -49,6 +49,35 @@
     color: white;
 }
 
+.bs-docs-header {
+    background: #DBDADA;
+    padding: 30px;
+    border-radius: 3px;
+}
+
+.google-sign-in {
+    width:125px;
+    margin:0 auto;
+}
+
+hr#hr-login {
+    width: 100%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border: 0 none;
+}
+
+.input-lg {
+    margin-top: 20px;
+}
+
+.btn-block {
+    margin-top: 20px;
+}
+
+/*
 form[role=login] img {
     display: block;
     margin: 0 auto;
@@ -58,7 +87,7 @@ form[role=login] img {
 
 form[role=login] {
     color: #5d5d5d;
-    background: #f2f2f2;
+    background: #DBDADA;
     padding: 26px;
     border-radius: 10px;
     -moz-border-radius: 10px;
@@ -75,7 +104,7 @@ form[role=login] input, form[role=login] button {
 .btn-primary {
     font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
     height: 40px;
-}
+}*/
 
 /*Error dialog*/
 
