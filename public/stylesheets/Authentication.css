@@ -58,7 +58,7 @@
 /*Login*/
 
 .bs-docs-header {
-    background: #DBDADA;
+    background: #DCD8D8;
     padding: 30px;
     border-radius: 3px;
 }
@@ -66,6 +66,10 @@
 .google-sign-in {
     width:125px;
     margin:0 auto;
+}
+
+p {
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 hr#hr-login {
