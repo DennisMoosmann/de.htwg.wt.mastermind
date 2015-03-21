@@ -57,7 +57,7 @@
 
 /*Login*/
 
-.bs-docs-header {
+#login-range {
     background: #DCD8D8;
     padding: 30px;
     border-radius: 3px;
@@ -68,10 +68,6 @@
     margin:0 auto;
 }
 
-p {
-    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
-}
-
 hr#hr-login {
     width: 100%;
     height: 1px;
@@ -79,6 +75,10 @@ hr#hr-login {
     margin-right: auto;
     background-color: black;
     border: 0 none;
+}
+
+.sign-in-text {
+    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
 }
 
 .input-lg {
