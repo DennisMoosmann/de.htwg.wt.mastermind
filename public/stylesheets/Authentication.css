@@ -1,3 +1,5 @@
+/*Welcome header*/
+
 .welcome-header {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -10,6 +12,8 @@
     font-size: 400%;
 }
 
+/*Info text*/
+
 .welcome-text {
     margin-top: 30px;
     font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
@@ -20,6 +24,8 @@
     font-size: 120%;
     margin-top: 10px;
 }
+
+/*Github links*/
 
 .github {
     border-style: solid;
@@ -49,6 +55,8 @@
     color: white;
 }
 
+/*Login*/
+
 .bs-docs-header {
     background: #DBDADA;
     padding: 30px;
@@ -76,35 +84,6 @@ hr#hr-login {
 .btn-block {
     margin-top: 20px;
 }
-
-/*
-form[role=login] img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 35px;
-    border-radius: 3px;
-}
-
-form[role=login] {
-    color: #5d5d5d;
-    background: #DBDADA;
-    padding: 26px;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    margin-top: 50px;
-    align: center;
-}
-
-form[role=login] input, form[role=login] button {
-    font-size: 18px;
-    margin: 16px 0;
-}
-
-.btn-primary {
-    font-family: "Century Gothic", CenturyGothic, "Apple Gothic", sans-serif;
-    height: 40px;
-}*/
 
 /*Error dialog*/
 
