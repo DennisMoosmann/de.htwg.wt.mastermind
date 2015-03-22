@@ -134,6 +134,10 @@ public class MainController extends Controller {
         return ok(result);
     }
 
+    /**
+     * Shows the solution of the hidden mastermind-colors.
+     * @return The solution.
+     */
     public static Result showSolution() {
         controller.showSolution();
         String [] masterColors = controller.getMastermindColors();
@@ -150,16 +154,38 @@ public class MainController extends Controller {
         return ok(result);
     }
 
+    /**
+     * Used to get the rows amount of the game-grid.
+     * @return The rows amount of the game-grid.
+     */
     public static Result getRowsAmount() {
         int rowsAmount = controller.getRowsAmount();
         return ok(String.valueOf(rowsAmount));
     }
 
+    /**
+     * Used to get the columns amount of the game-grid.
+     * @return The columns amount of the game grid.
+     */
     public static Result getColumnsAmount() {
         int columnsAmount = controller.getColumnsAmount();
         return ok(String.valueOf(columnsAmount));
     }
 
+    /**
+     * Used to get the actual row.
+     * @return The actual row.
+     */
+    public static Result getActualRow() {
+        int actualRow = controller.getActualRow();
+        return ok(String.valueOf(actualRow));
+    }
+
+    /**
+     * Used to get the color of a string value.
+     * @param color The color as string.
+     * @return The color as color class.
+     */
     public static Result getColorFromString(String color) {
         if (color.equals("-")) {
             color = null;
@@ -168,16 +194,19 @@ public class MainController extends Controller {
         return ok(String.valueOf(c));
     }
 
+    /**
+     * Used to get the status of the game.
+     * @return The status of the game.
+     */
     public static Result getStatus() {
         String state = controller.getStatusLine();
         return ok(state);
     }
 
-    public static Result getActualRow() {
-        int actualRow = controller.getActualRow();
-        return ok(String.valueOf(actualRow));
-    }
-
+    /**
+     * Creates new mastermind game.
+     * @return Nothing.
+     */
     public static Result newGame() {
         int rowsAmount = controller.getRowsAmount();
         int columnsAmount = controller.getColumnsAmount();
@@ -185,6 +214,10 @@ public class MainController extends Controller {
         return ok();
     }
 
+    /**
+     * Checks if the game is solved.
+     * @return True if solved, false if not.
+     */
     public static Result isSolved() {
         boolean isSolved = controller.isSolved();
         return ok(String.valueOf(isSolved));
