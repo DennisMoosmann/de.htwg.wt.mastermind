@@ -1,32 +1,45 @@
 package controllers;
 
-
 import de.htwg.se.mastermind.Mastermind;
 import de.htwg.se.mastermind.controller.IController;
 import de.htwg.se.mastermind.model.IGrid;
-import play.*;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import play.libs.F;
 import play.libs.Json;
 import play.mvc.*;
 import play.mvc.WebSocket;
-import views.html.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import java.awt.*;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * The MainController class creates an instance of the mastermind-controller which is implemented in
+ * lib/de.htwg.se.mastermind jar-file. Through this controller it is possible to receive/manipulate
+ * data of the mastermind-model.
+ *
+ * @author  Dennis Moosmann
+ * @version 1.0
+ * @since   2015-02-19
+ */
 public class MainController extends Controller {
 
     static IController controller = Mastermind.getInstance().getController();
     private static Helper helper = new Helper(controller);
 
+    /**
+     * Renders the index.html file.
+     * @return the rendered file.
+     */
     public static Result index() {
         return ok(views.html.index.render("HTWG Mastermind", controller));
     }
 
+    /**
+     * Enables google+ authentication
+     * @source https://github.com/michaelknoch/de.htwg.wt.go/blob/master/app/controllers/Application.java
+     * @return Json-Object with client_id, state and application_name
+     */
     public static Result auth() {
         final String CLIENT_ID = "723736591091-fqdhdi5d3eql2k1fqp6tlkd8id84b10l.apps.googleusercontent.com";
         final String APPLICATION_NAME = "Mastermind";
@@ -34,65 +47,42 @@ public class MainController extends Controller {
         String state = new BigInteger(130, new SecureRandom()).toString(32);
         session("state", state);
 
-        Map m1 = new LinkedHashMap();
-
-        m1.put("client_id", CLIENT_ID);
-        m1.put("state", state);
-        m1.put("application_name", APPLICATION_NAME);
-        return ok(Json.toJson(m1));
+        Map map = new LinkedHashMap();
+        map.put("client_id", CLIENT_ID);
+        map.put("state", state);
+        map.put("application_name", APPLICATION_NAME);
+        return ok(Json.toJson(map));
     }
 
+    /**
+     * Used to get the actual game grid.
+     * @return The game grid.
+     */
     public static Result getGameGrid() {
-        /*IGrid grid = controller.getGrid();
-        String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
-        ObjectNode result = Json.newObject();
-
-        int rowIndex = 0;
-        int columnIndex = 0;
-        for (int i = controller.getRowsAmount() - 2; i >= 0; i--) {
-            for (int j = controller.getColumnsAmount()/2 - 1; j >= 0; j--) {
-                field[rowIndex][columnIndex] = controller.getValue(i, j);
-                columnIndex++;
-            }
-            columnIndex = 0;
-            rowIndex++;
-        }*/
-
-        //gameGrid = field;
         ObjectNode result = Json.newObject();
         String [][] field = helper.getGameField();
         result.put("gameGrid", Json.toJson(field));
         return ok(result);
     }
 
+    /**
+     * Used to get the actual stick grid
+     * @return The stick grid.
+     */
     public static Result getStickGrid() {
-        /*IGrid grid = controller.getGrid();
-        int rowsAmount = (grid.getRowsAmount() - 1) * 2;
-        int columnsAmount = grid.getRowsAmount()/4;
-        String [][] field = new String[rowsAmount][columnsAmount];
-        ObjectNode result = Json.newObject();
-
-        int rowIndex = 0;
-        int colIndex = 0;
-
-
-        for (int i = controller.getRowsAmount() - 2; i >= 0; i--) {
-            for (int j = controller.getColumnsAmount()/2; j < controller.getColumnsAmount(); j++) {
-                field[rowIndex][colIndex] = controller.getValue(i, j);
-                colIndex++;
-
-                if (colIndex >= controller.getColumnsAmount()/4) {
-                    colIndex = 0;
-                    rowIndex++;
-                }
-            }
-        }*/
         ObjectNode result = Json.newObject();
         String [][] field = helper.getStickGrid();
         result.put("stickGrid", Json.toJson(field));
         return ok(result);
     }
 
+    /**
+     * Sets a value at [row][column] of the actual game grid.
+     * @param row The row were to set the value.
+     * @param column The column where to set the value.
+     * @param value The value to set.
+     * @return Nothing.
+     */
     public static Result setValue(int row, int column, String value) {
         controller.setValue(row, column, value);
         return ok();
