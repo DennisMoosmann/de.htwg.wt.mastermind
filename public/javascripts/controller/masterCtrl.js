@@ -1,7 +1,7 @@
  angular.module('mastermindApp').controller('MasterCtrl', function($scope, MasterService, AuthService, WebsocketService) {
 
     /**
-        * @desc: creates new game
+        * @desc: Creates new game.
     **/
     $scope.init = function() {
         $scope.getStatus();
@@ -20,14 +20,14 @@
     };
 
     /**
-        * @desc: shows instruction popover
+        * @desc: Shows instruction popover.
     **/
     $(function () {
       $('[data-toggle="popover"]').popover()
     })
 
     /**
-        * @desc: gets game status from server
+        * @desc: Receives game status from server.
     **/
     $scope.getStatus = function() {
         MasterService.getStatus().then(function(response) {
@@ -37,7 +37,7 @@
     };
 
     /**
-        * @desc: sets the 'confirm row'-button on the position of the acrual row
+        * @desc: Sets the 'confirm row'-button on the position of the acrual row
     **/
     $scope.setButtonPosition = function(initial) {
         var marginMul;
@@ -76,6 +76,9 @@
         $scope.calcGridLines();
     };
 
+    /**
+        * @desc: Receives mastermind-colors from server.
+    **/
 	$scope.getMastermindColors = function() {
         MasterService.getMastermindColors().then(function(response) {
             var masterColors = response.data.masterColors;
@@ -83,6 +86,9 @@
         });
 	};
 
+    /**
+        * @desc: Receives game-grid from server.
+    **/
     $scope.getGameGrid = function() {
         MasterService.getGameGrid().then(function(response) {
             var gameGrid = response.data.gameGrid;
@@ -98,6 +104,9 @@
         });
     };
 
+    /**
+        * @desc: Receives stick-grid from server.
+    **/
     $scope.getStickGrid = function() {
         MasterService.getStickGrid().then(function(response) {
             var stickGrid = response.data.stickGrid;
@@ -113,6 +122,9 @@
         });
     };
 
+    /**
+        * @desc: Receives actual row from server.
+    **/
     $scope.getActualRow = function() {
         MasterService.getActualRow().then(function(response) {
             var actualRow = response.data;
@@ -121,6 +133,9 @@
         });
     };
 
+    /**
+        * @desc: Receives rows amount from server.
+    **/
     $scope.getRowsAmount = function() {
         MasterService.getRowsAmount().then(function(response) {
             var rowsAmount = response.data;
@@ -131,8 +146,10 @@
         });
     };
 
+    /**
+        * @desc: Calculates position of grid lines of the stick-grid.
+    **/
     $scope.calcGridLines = function() {
-
         var width;
         if ($scope.rowsAmount == 12) {
             grid.style.width = "70px";
@@ -150,6 +167,9 @@
         }
     };
 
+    /**
+        * @desc: Receives columns amount from server.
+    **/
     $scope.getColumnsAmount = function(){
         MasterService.getColumnsAmount().then(function(response) {
             var columnsAmount = response.data;
@@ -157,6 +177,9 @@
         });
     };
 
+    /**
+        * @desc: Creates new mastermind game.
+    **/
 	$scope.newGame = function() {
 		MasterService.newGame().then(function() {
 		    localStorage.setItem('isSolved', "false");
@@ -167,6 +190,9 @@
 		});
 	};
 
+    /**
+        * @desc: Shows the solution of the game.
+    **/
 	$scope.showSolution = function(location) {
 		MasterService.showSolution().then(function(response) {
 		    if (!$scope.isShown) {
@@ -180,6 +206,9 @@
 		});
     };
 
+    /**
+        * @desc: Sets a value at [row][col] of the game-grid.
+    **/
    	$scope.setValue = function(row, clickedRow, col, val) {
    		if ($scope.solved == "false") {
    			newRow = $scope.rowsAmount - 2 - row;
@@ -230,6 +259,9 @@
    		}
      };
 
+    /**
+        * @desc: Confirms the actual row.
+    **/
     $scope.confirmRow = function() {
         MasterService.confirmRow().then(function(response) {
             var conf = response.data.conf;
@@ -255,6 +287,9 @@
         });
     };
 
+    /**
+        * @desc: Checks if game is solved.
+    **/
     $scope.isSolved = function() {
         MasterService.isSolved().then(function(response) {
             var isSolved = response.data;
@@ -263,6 +298,9 @@
         });
     };
 
+    /**
+        * @desc: Increases or decreases size of the game-grid.
+    **/
     $scope.resetSize = function(rows, cols) {
         MasterService.resetSize(rows, cols).then(function(response) {
             localStorage.setItem('isSolved', "false");
@@ -295,12 +333,8 @@
             });
         });
         $scope.stickArray = stickGrid;
-
         $scope.actualRow = data.actualRow;
-        //$scope.$apply();
-
     }
 
     $scope.init();
-
 });
