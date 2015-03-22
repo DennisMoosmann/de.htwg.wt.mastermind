@@ -77,7 +77,7 @@ public class MainController extends Controller {
     }
 
     /**
-     * Sets a value at [row][column] of the actual game grid.
+     * Sets a value at [row][column] of the actual game-grid.
      * @param row The row were to set the value.
      * @param column The column where to set the value.
      * @param value The value to set.
@@ -88,14 +88,23 @@ public class MainController extends Controller {
         return ok();
     }
 
+    /**
+     * Increases or decreases the size of the game-field.
+     * @param rows The new amount of rows.
+     * @param columns The new amount of columns.
+     * @return Nothing.
+     */
     public static Result resetSize(int rows, int columns) {
         controller.resetSize(rows, columns);
         return ok();
     }
 
+    /**
+     * Confirms the actual row.
+     * @return A Json-Object if row is confirmed, game is solved and with the actual row.
+     */
     public static Result confirmRow() {
         controller.confirmRow();
-        //int actualRow = controller.getActualRow();
         String [] conf = new String[3];
         conf[0] = String.valueOf(controller.getRowConfirmed());
         conf[1] = String.valueOf(controller.isSolved());
@@ -107,8 +116,11 @@ public class MainController extends Controller {
         return ok(result);
     }
 
+    /**
+     * Used to get the mastermind-colors.
+     * @return The mastermind-colors.
+     */
     public static Result getMastermindColors() {
-        IGrid grid = controller.getGrid();
         String [] masterColors = new String[controller.getColumnsAmount()/2];
 
         int index = 0;
