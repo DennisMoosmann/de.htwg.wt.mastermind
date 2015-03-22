@@ -1,24 +1,31 @@
 package controllers;
 
-import de.htwg.se.mastermind.Mastermind;
 import de.htwg.se.mastermind.controller.IController;
 import de.htwg.se.mastermind.model.IGrid;
-import play.*;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import play.libs.F;
-import play.libs.Json;
-import play.mvc.*;
-import play.mvc.WebSocket;
-import views.html.*;
-import com.fasterxml.jackson.databind.JsonNode;
 
+
+/**
+ * The Helper class imports the game-field and stick-grid from the controller because they are used more than once.
+ *
+ * @author  Dennis Moosmann
+ * @version 1.0
+ * @since   2015-03-10
+ */
 public class Helper {
     private IController controller;
 
+    /**
+     * Constructor
+     * @param ctrl The mastermind controller
+     */
     public Helper(IController ctrl) {
         this.controller = ctrl;
     }
 
+    /**
+     * Used to get the actual game-field from controller.
+     * @return The game-field.
+     */
     public String[][] getGameField() {
         IGrid grid = this.controller.getGrid();
         String[][] field = new String[grid.getRowsAmount()-1][grid.getColumnsAmount()/2];
@@ -37,6 +44,10 @@ public class Helper {
         return field;
     }
 
+    /**
+     * Used to get the actual stick-grid from controller.
+     * @return The stick-grid.
+     */
     public String[][] getStickGrid() {
         IGrid grid = controller.getGrid();
         int rowsAmount = (grid.getRowsAmount() - 1) * 2;
