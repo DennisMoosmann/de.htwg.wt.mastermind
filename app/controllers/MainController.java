@@ -232,8 +232,8 @@ public class MainController extends Controller {
 
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
                 ObjectNode result = Json.newObject();
-                String [][] field = helper.getGameField();
-                result.put("gameGrid", Json.toJson(field));
+                String [][] gameField= helper.getGameField();
+                result.put("gameGrid", Json.toJson(gameField));
                 String [][] stickField = helper.getStickGrid();
                 result.put("stickGrid", Json.toJson(stickField));
                 result.put("actualRow", Json.toJson(controller.getActualRow()));
