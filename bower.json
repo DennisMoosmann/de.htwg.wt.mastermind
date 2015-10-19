@@ -1,0 +1,19 @@
+{
+  "name": "de.htwg.wt.mastermind",
+  "version": "0.0.0",
+  "homepage": "https://github.com/DennisMoosmann/de.htwg.wt.mastermind",
+  "authors": [
+    "Dennis Moosmann <dennis.moosmann@gmx.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  }
+}
