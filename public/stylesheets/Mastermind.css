@@ -1,37 +1,13 @@
-/*Navigation bar*/
-
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-.navbar-header {
-    text-align: center;
-}
-
-.navbar-mastermind {
-	width: 1000px;
-}
-
-.navbar-right {
-    float: right!important;
-}
-
+/*Popover*/
 .popover {
     max-width: 800px;
     width: 800px;
 }
 
-
 /*Game head*/
 
 #game-head {
-   border-radius: 3px;
+    border-radius: 3px;
 }
 
 #game-status {
