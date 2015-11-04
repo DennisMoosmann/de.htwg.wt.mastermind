@@ -69,6 +69,11 @@ angular.module('mastermindApp').controller('AuthCtrl', function($scope, $modal, 
         }
     };
 
+    /***
+        *@ desc: Facebook login
+    ***/
+
+
     /**
         * @desc: Prevents that user can type in more than one @-sign in email-adress input field.
     **/
