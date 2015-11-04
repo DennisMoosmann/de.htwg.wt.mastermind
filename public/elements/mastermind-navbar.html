@@ -1,6 +1,29 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
 <dom-module id="mastermind-navbar" attributes="user">
+    <style>
+        .navbar .navbar-nav {
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
+
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
+
+        .navbar-header {
+            text-align: center;
+        }
+
+        .navbar-mastermind {
+            width: 1000px;
+        }
+
+        .navbar-right {
+            float: right!important;
+        }
+    </style>
     <template>
         <div id="game-navbar">
             <nav class="navbar navbar-default" role="navigation">
