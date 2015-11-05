@@ -1,5 +1,37 @@
 <div class="container">
-    <mastermind-navbar user="{{userMail}}"></mastermind-navbar>
+    <!--<mastermind-navbar user="{{userMail}}"></mastermind-navbar>-->
+    <div id="game-navbar">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid navbar-mastermind">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Mastermind</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="" ng-click="newGame()">New game</a></li>
+                        <li><a href="" ng-click="showSolution('true')">Show solution</a></li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="" ng-click="resetSize(12,12)">11*6</a></li>
+                                <li><a href="" ng-click="resetSize(8, 8)">7*4</a></li>
+                                <li><a href="" ng-click="resetSize(4,4)">3*2</a></li>
+                            </ul>
+                        </li>
+                        <li><a id="linkInstructions" href="" data-toggle="popover" title="Instructions"
+                               data-content="Can you guess the hidden 'Mastercolors' in the right order? Click on the
+                               balls of the actual row to choose a color. If you're done click 'Confirm row'. The small balls
+                               will give you information about your choice: <b>WHITE:</b> right color on wrong place
+                               <b>BLACK:</b> right color on right place <b>GREY:</b> color not in solution"
+                               data-trigger="focus" data-html="true" data-placement="bottom" container="body">Instructions</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a id="loggedInMail">Logged in as: {{userMail}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
     <div id="game-head">
         <hr id="hr1">
 
