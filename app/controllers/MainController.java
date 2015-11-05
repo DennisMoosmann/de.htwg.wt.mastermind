@@ -2,11 +2,10 @@ package controllers;
 
 import de.htwg.se.mastermind.Mastermind;
 import de.htwg.se.mastermind.controller.IController;
-import de.htwg.se.mastermind.model.IGrid;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import play.libs.Json;
 import play.mvc.*;
-import play.mvc.WebSocket;
+//import play.mvc.WebSocket;
 import java.awt.*;
 import java.math.BigInteger;
 import java.security.SecureRandom;
@@ -227,7 +226,7 @@ public class MainController extends Controller {
         return ok();
     }
 
-    public static WebSocket<String> connectWebSocket() {
+    /*public static WebSocket<String> connectWebSocket() {
         return new WebSocket<String>() {
 
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
@@ -242,20 +241,20 @@ public class MainController extends Controller {
                 /*ObjectNode result = Json.newObject();
 
                 result.put("gameGrid", Json.toJson(gameGrid));
-                result.put("actualRow", Json.toJson(controller.getActualRow()));*/
+                result.put("actualRow", Json.toJson(controller.getActualRow()));
                 //out.write(gameGrid.toString());
 
                 // For each event received on the socket,
-                /*in.onMessage(new F.Callback<String>() {
+                in.onMessage(new F.Callback<String>() {
                     public void invoke(String event) {
                         out.write("Schwein");
                         // Log events to the console
                         //println(event);
 
                     }
-                });*/
+                });
                 // For each event received on the socket,
-                /*in.onMessage(new Callback<String>() {
+                in.onMessage(new Callback<String>() {
                     public void invoke(String event) {
                         //ontroller.showSolution();
                         // Log events to the console
@@ -263,11 +262,11 @@ public class MainController extends Controller {
                         out.write("Schwein");
 
                     }
-                });*/
+                });
             }
 
 
         };
 
-    }
+    }*/
 }
