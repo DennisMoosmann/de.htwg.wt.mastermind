@@ -185,13 +185,13 @@ public class MainController extends Controller {
      * @param color The color as string.
      * @return The color as color class.
      */
-    public static Result getColorFromString(String color) {
+    /*public static Result getColorFromString(String color) {
         if (color.equals("-")) {
             color = null;
         }
         Color c = controller.getColorFromString(color);
         return ok(String.valueOf(c));
-    }
+    }*/
 
     /**
      * Used to get the status of the game.

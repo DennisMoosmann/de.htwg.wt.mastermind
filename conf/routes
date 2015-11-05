@@ -12,7 +12,7 @@ GET 	/resetSize/:r/:c			controllers.MainController.resetSize(r: Integer, c: Inte
 GET 	/getMastermindColors		controllers.MainController.getMastermindColors()
 GET 	/getRowsAmount				controllers.MainController.getRowsAmount()
 GET		/getColumnsAmount			controllers.MainController.getColumnsAmount()
-GET     /getColorFromString/:c      controllers.MainController.getColorFromString(c: String)
+# GET     /getColorFromString/:c      controllers.MainController.getColorFromString(c: String)
 GET     /getStatus                  controllers.MainController.getStatus()
 GET     /getActualRow               controllers.MainController.getActualRow()
 GET     /getStickGrid               controllers.MainController.getStickGrid()
