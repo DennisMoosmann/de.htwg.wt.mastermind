@@ -1,15 +1,18 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import de.htwg.se.mastermind.Mastermind;
 import de.htwg.se.mastermind.controller.IController;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import play.libs.F;
 import play.libs.Json;
 import play.mvc.*;
 //import play.mvc.WebSocket;
-import java.awt.*;
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,6 +28,7 @@ public class MainController extends Controller {
 
     static IController controller = Mastermind.getInstance().getController();
     private static Helper helper = new Helper(controller);
+    private static List<WebSocket.Out<String>> connections = new ArrayList<WebSocket.Out<String>>();
 
     /**
      * Renders the index.html file.
@@ -226,47 +230,23 @@ public class MainController extends Controller {
         return ok();
     }
 
-    /*public static WebSocket<String> connectWebSocket() {
+    public static WebSocket<String> connectWebSocket() {
         return new WebSocket<String>() {
-
             public void onReady(WebSocket.In<String> in, WebSocket.Out<String> out) {
-                ObjectNode result = Json.newObject();
-                String [][] gameField= helper.getGameField();
-                result.put("gameGrid", Json.toJson(gameField));
-                String [][] stickField = helper.getStickGrid();
-                result.put("stickGrid", Json.toJson(stickField));
-                result.put("actualRow", Json.toJson(controller.getActualRow()));
-                out.write(result.toString());
-                //out.write("Main");
-                /*ObjectNode result = Json.newObject();
-
-                result.put("gameGrid", Json.toJson(gameGrid));
-                result.put("actualRow", Json.toJson(controller.getActualRow()));
-                //out.write(gameGrid.toString());
-
-                // For each event received on the socket,
+                connections.add(out);
                 in.onMessage(new F.Callback<String>() {
                     public void invoke(String event) {
-                        out.write("Schwein");
-                        // Log events to the console
-                        //println(event);
-
-                    }
-                });
-                // For each event received on the socket,
-                in.onMessage(new Callback<String>() {
-                    public void invoke(String event) {
-                        //ontroller.showSolution();
-                        // Log events to the console
-                        //println(event);
-                        out.write("Schwein");
-
+                        ObjectNode result = Json.newObject();
+                        String [][] game = helper.getGameField();
+                        result.put("gameGrid", Json.toJson(game));
+                        String [][] sticks = helper.getStickGrid();
+                        result.put("stickGrid", Json.toJson(sticks));
+                        for (WebSocket.Out<String> out : connections) {
+                            out.write(result.toString());
+                        }
                     }
                 });
             }
-
-
         };
-
-    }*/
+    }
 }
