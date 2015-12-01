@@ -71,4 +71,42 @@ public class Helper {
 
         return field;
     }
+
+    public String getStatus() {
+        return controller.getStatusLine();
+    }
+
+    public int getActualRow() {
+        return controller.getActualRow();
+    }
+
+    public String [] getMastermindColors() {
+        String [] masterColors = controller.getMastermindColors();
+        String [] newOrder = new String[masterColors.length];
+
+        int index = masterColors.length - 1;
+        for (int i = 0; i < masterColors.length; i++) {
+            newOrder[i] = masterColors[index];
+            index--;
+        }
+
+        return  newOrder;
+    }
+
+    public String [] getNewMastermindColors() {
+        String [] newMastermindColors = new String[controller.getMastermindColors().length];
+        for (int i = 0; i < newMastermindColors.length; i++) {
+            newMastermindColors[i] = "xx";
+        }
+
+        return newMastermindColors;
+    }
+
+    public int getRowsAmount() {
+        return controller.getRowsAmount();
+    }
+
+    public int getColumnsAmount() {
+        return controller.getColumnsAmount();
+    }
 }
