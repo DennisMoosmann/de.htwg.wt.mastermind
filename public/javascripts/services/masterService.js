@@ -26,6 +26,9 @@ angular.module('mastermindApp')
         confirmRow: function() {
             return $http.get('/confirmRow');
         },
+        confirmRow2: function() {
+            return $http.get('/confirmRow2');
+        },
         getActualRow: function() {
             return $http.get('/getActualRow');
         },
