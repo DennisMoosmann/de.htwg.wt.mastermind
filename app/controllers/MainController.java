@@ -1,13 +1,11 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import de.htwg.se.mastermind.Mastermind;
 import de.htwg.se.mastermind.controller.IController;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import play.libs.F;
 import play.libs.Json;
 import play.mvc.*;
-//import play.mvc.WebSocket;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -119,6 +117,18 @@ public class MainController extends Controller {
         return ok(result);
     }
 
+    public static Result confirmRow2() {
+        String [] conf = new String[3];
+        conf[0] = String.valueOf(controller.getRowConfirmed());
+        conf[1] = String.valueOf(controller.isSolved());
+        conf[2] = String.valueOf(controller.getActualRow());
+
+        ObjectNode result = Json.newObject();
+        result.put("conf", Json.toJson(conf));
+
+        return ok(result);
+    }
+
     /**
      * Used to get the mastermind-colors.
      * @return The mastermind-colors.
@@ -143,14 +153,7 @@ public class MainController extends Controller {
      */
     public static Result showSolution() {
         controller.showSolution();
-        String [] masterColors = controller.getMastermindColors();
-        String [] newOrder = new String[masterColors.length];
-
-        int index = masterColors.length - 1;
-        for (int i = 0; i < masterColors.length; i++) {
-            newOrder[i] = masterColors[index];
-            index--;
-        }
+        String [] newOrder = helper.getMastermindColors();
 
         ObjectNode result = Json.newObject();
         result.put("masterColors", Json.toJson(newOrder));
@@ -162,7 +165,7 @@ public class MainController extends Controller {
      * @return The rows amount of the game-grid.
      */
     public static Result getRowsAmount() {
-        int rowsAmount = controller.getRowsAmount();
+        int rowsAmount = helper.getRowsAmount();
         return ok(String.valueOf(rowsAmount));
     }
 
@@ -171,7 +174,7 @@ public class MainController extends Controller {
      * @return The columns amount of the game grid.
      */
     public static Result getColumnsAmount() {
-        int columnsAmount = controller.getColumnsAmount();
+        int columnsAmount = helper.getColumnsAmount();
         return ok(String.valueOf(columnsAmount));
     }
 
@@ -180,29 +183,16 @@ public class MainController extends Controller {
      * @return The actual row.
      */
     public static Result getActualRow() {
-        int actualRow = controller.getActualRow();
+        int actualRow = helper.getActualRow();
         return ok(String.valueOf(actualRow));
     }
-
-    /**
-     * Used to get the color of a string value.
-     * @param color The color as string.
-     * @return The color as color class.
-     */
-    /*public static Result getColorFromString(String color) {
-        if (color.equals("-")) {
-            color = null;
-        }
-        Color c = controller.getColorFromString(color);
-        return ok(String.valueOf(c));
-    }*/
 
     /**
      * Used to get the status of the game.
      * @return The status of the game.
      */
     public static Result getStatus() {
-        String state = controller.getStatusLine();
+        String state = helper.getStatus();
         return ok(state);
     }
 
@@ -241,6 +231,34 @@ public class MainController extends Controller {
                         result.put("gameGrid", Json.toJson(game));
                         String [][] sticks = helper.getStickGrid();
                         result.put("stickGrid", Json.toJson(sticks));
+                        result.put("status", Json.toJson(helper.getStatus()));
+                        result.put("actualRow", Json.toJson(helper.getActualRow()));
+                        result.put("columnsAmount", Json.toJson(helper.getColumnsAmount()));
+                        result.put("rowsAmount", Json.toJson(helper.getRowsAmount()));
+                        if (event.equals("showSolution")) {
+                            result.put("showSolution", Json.toJson("true"));
+                        } else {
+                            result.put("showSolution", Json.toJson("false"));
+                        }
+
+                        if (event.equals("newGame")) {
+                            result.put("newGame", Json.toJson("true"));
+                        } else {
+                            result.put("newGame", Json.toJson("false"));
+                        }
+
+                        if (event.equals("confirmRow")) {
+                            result.put("rowWasConfirmed", Json.toJson("true"));
+                        } else {
+                            result.put("rowWasConfirmed", Json.toJson("false"));
+                        }
+
+                        if (event.equals("resetSize")) {
+                            result.put("resetSize", Json.toJson("true"));
+                        } else {
+                            result.put("resetSize", Json.toJson("false"));
+                        }
+
                         for (WebSocket.Out<String> out : connections) {
                             out.write(result.toString());
                         }
