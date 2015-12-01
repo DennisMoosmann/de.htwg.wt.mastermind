@@ -18,6 +18,9 @@ angular.module('mastermindApp')
             ws = new WebSocket(socketUrl);
             ws.onmessage = onMessageFn;
             return ws;
+        },
+        send: function(msg) {
+            ws.send(msg);
         }
     };
 });
