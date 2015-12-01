@@ -142,11 +142,7 @@
     **/
 	$scope.newGame = function() {
 		MasterService.newGame().then(function() {
-		    localStorage.setItem('isSolved', "false");
-            localStorage.setItem('actualRow', 0);
-		    $scope.init();
-		    btnConfirmRow.disabled = false;
-		    $scope.setButtonPosition(0);
+		    WebsocketService.send("newGame");
 		});
 	};
 
@@ -156,13 +152,7 @@
     **/
 	$scope.showSolution = function(location) {
 		MasterService.showSolution().then(function(response) {
-		    if (!$scope.isShown) {
-		        $scope.getMastermindColors();
-                if (location == "true") {
-                    $scope.getStatus();
-                }
-                 $scope.isShown = true;
-		    }
+		    WebsocketService.send("showSolution");
 		});
     };
 
@@ -216,7 +206,6 @@
 				newCol = $scope.columnsAmount/2 - 1 - col;
 
 				MasterService.setValue(row, newCol, value).then(function(response) {
-				    $scope.getStatus();
 				    WebsocketService.send(value);
 				});
 			}
@@ -228,26 +217,7 @@
     **/
     $scope.confirmRow = function() {
         MasterService.confirmRow().then(function(response) {
-            var conf = response.data.conf;
-            var tempRowsAmount = ($scope.rowsAmount - 1).toString();
-            $scope.getStatus();
-            $scope.getStickGrid();
-            $scope.solved = conf[1];
-            $scope.actualRow = conf[2];
-            localStorage.setItem('isSolved', $scope.solved);
-            localStorage.setItem('actualRow', $scope.actualRow);
-
-            if (conf[0] == "true") {
-                if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
-                    $scope.setButtonPosition(2);
-                } else if ($scope.solved == "true") {
-                    btnConfirmRow.disabled = true;
-                    $scope.showSolution("false");
-                } else {
-                    btnConfirmRow.disabled = true;
-                    $scope.showSolution("false");
-                }
-            }
+            WebsocketService.send("confirmRow");
         });
     };
 
@@ -269,11 +239,7 @@
     **/
     $scope.resetSize = function(rows, cols) {
         MasterService.resetSize(rows, cols).then(function(response) {
-            localStorage.setItem('isSolved', "false");
-            localStorage.setItem('actualRow', 0);
-            $scope.init();
-            btnConfirmRow.disabled = false;
-            $scope.setButtonPosition(0);
+            WebsocketService.send("resetSize");
         });
     };
 
@@ -340,8 +306,57 @@
             });
         });
         $scope.stickArray = stickGrid;
+        $scope.status = data.status;
+        $scope.actualRow = data.actualRow;
+        $scope.rowsAmount = data.rowsAmount;
+        $scope.columnsAmount = data.columnsAmount;
+
+        if (data.newGame == "true") {
+            localStorage.setItem('isSolved', "false");
+            localStorage.setItem('actualRow', 0);
+            $scope.init();
+            btnConfirmRow.disabled = false;
+            $scope.setButtonPosition(0);
+        }
+
+        if (data.rowWasConfirmed == "true") {
+            MasterService.confirmRow2().then(function(response) {
+                    var conf = response.data.conf;
+                    var tempRowsAmount = ($scope.rowsAmount - 1).toString();
+                    $scope.solved = conf[1];
+                    $scope.actualRow = conf[2];
+                    localStorage.setItem('isSolved', $scope.solved);
+                    localStorage.setItem('actualRow', $scope.actualRow);
+
+                    if (conf[0] == "true") {
+                        if ($scope.solved == "false" && $scope.actualRow != tempRowsAmount) {
+                            $scope.setButtonPosition(2);
+                        } else if ($scope.solved == "true") {
+                            btnConfirmRow.disabled = true;
+                            $scope.showSolution("false");
+                        } else {
+                            btnConfirmRow.disabled = true;
+                            $scope.showSolution("false");
+                        }
+                    }
+                });
+        }
+
+        if (data.resetSize == "true") {
+            localStorage.setItem('isSolved', "false");
+            localStorage.setItem('actualRow', 0);
+            $scope.init();
+            btnConfirmRow.disabled = false;
+            $scope.setButtonPosition(0);
+        }
+
+        if(data.showSolution == "true") {
+            if (!$scope.isShown) {
+                $scope.getMastermindColors();
+                $scope.isShown = true;
+            }
+        }
         $scope.$apply();
-        //$scope.actualRow = data.actualRow;
     }
 
     $scope.init();
