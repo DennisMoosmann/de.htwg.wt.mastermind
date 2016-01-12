@@ -76,11 +76,24 @@
         * @desc: Receives mastermind-colors from server.
     **/
 	$scope.getMastermindColors = function() {
-        MasterService.getMastermindColors().then(function(response) {
-            var masterColors = response.data.masterColors;
-            $scope.masterColors = masterColors;
-        });
+//        MasterService.getMastermindColors().then(function(response) {
+//            var masterColors = response.data.masterColors;
+//            $scope.masterColors = masterColors;
+//        });
+        ajaxGetMastermindColors();
 	};
+
+	function ajaxGetMastermindColors()
+    {
+        $.ajax({
+            type: "GET",
+            url: "/getMastermindColors"
+        }).success(function(data) {
+             var masterColors = data.masterColors;
+             $scope.masterColors = masterColors;
+             $scope.$apply();
+        });
+    }
 
     /**
         * @desc: Receives actual row from server.
@@ -238,10 +251,21 @@
         * @param: number cols - the new columns amount
     **/
     $scope.resetSize = function(rows, cols) {
-        MasterService.resetSize(rows, cols).then(function(response) {
-            WebsocketService.send("resetSize");
-        });
+        //MasterService.resetSize(rows, cols).then(function(response) {
+        //WebsocketService.send("resetSize");
+        //        });
+        ajax_resetSize(rows, cols);
     };
+
+    function ajax_resetSize(rows, cols)
+    {
+        $.ajax({
+            type: "GET",
+            url: "/resetSize/" + rows + "/" + cols
+        }).success(function() {
+             WebsocketService.send("resetSize");
+        });
+    }
 
     /**
         * @desc: Sets the 'confirm row'-button on the position of the actual row
@@ -306,7 +330,11 @@
             });
         });
         $scope.stickArray = stickGrid;
-        $scope.status = data.status;
+
+        if ($scope.status != 'You have won!!' && $scope.status != 'You have lost!!' ) {
+            $scope.status = data.status;
+        }
+
         $scope.actualRow = data.actualRow;
         $scope.rowsAmount = data.rowsAmount;
         $scope.columnsAmount = data.columnsAmount;
