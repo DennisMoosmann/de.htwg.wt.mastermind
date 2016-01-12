@@ -27,6 +27,7 @@ public class MainController extends Controller {
     static IController controller = Mastermind.getInstance().getController();
     private static Helper helper = new Helper(controller);
     private static List<WebSocket.Out<String>> connections = new ArrayList<WebSocket.Out<String>>();
+    private static boolean solutionShown = false;
 
     /**
      * Renders the index.html file.
@@ -236,7 +237,7 @@ public class MainController extends Controller {
                         result.put("columnsAmount", Json.toJson(helper.getColumnsAmount()));
                         result.put("rowsAmount", Json.toJson(helper.getRowsAmount()));
                         if (event.equals("showSolution")) {
-                            result.put("showSolution", Json.toJson("true"));
+                                result.put("showSolution", Json.toJson("true"));
                         } else {
                             result.put("showSolution", Json.toJson("false"));
                         }
