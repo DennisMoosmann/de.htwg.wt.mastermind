@@ -3,13 +3,13 @@
     <div id="game-head">
         <hr id="hr1">
 
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12">
             <div id="game-status" >
                 <p>STATE</p>
                 <p id="status"><strong>{{status}}</strong></p>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12">
             <div id="game-mastercolors" class="bs-docs-header">
                 <p>MASTERCOLORS</p>
                 <div class="game-mastercolors-center">
@@ -26,16 +26,16 @@
     </br>
     <div id="game-gamefield" class="bs-docs-header">
         <div class="container">
-            <div class="col-md-2">
+            <div class="col-md-2 col-xs-12">
                 <div id="gamefield-text">
                     <p>PLAYING FIELD</p>
                 </div>
             </div>
-            <div class="col-md-1 col-md-offset-1">
+            <div class="col-md-1 col-md-offset-1 col-xs-2 ">
                 <hr id="hr2">
                 <button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-xs-4">
                 <div class="stick-balls-align" id="grid">
                     <div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng-init="parentIndex=$index">
                         <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:3px;margin-top:3px;margin-bottom:2.5px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
@@ -45,14 +45,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="game-balls-center">
-                    <div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng-init="parentIndex=$index">
-                        <div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">
-                            <div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-5 col-xs-5">
+                <!--<div class="game-balls-center">-->
+                    <!--<div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng-init="parentIndex=$index">-->
+                        <!--<div style="float:left;margin-left:15px;margin-top:20px; border-radius:50px;" ng-repeat="x in elmt track by $index" ng-class="x">-->
+                            <!--<div id="bal" class={{x}} style="width:30px;height:30px;border-radius:50px;" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <mastermind-ball></mastermind-ball>
             </div>
         </div>
     </div>
