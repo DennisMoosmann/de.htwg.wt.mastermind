@@ -5,7 +5,6 @@
 }
 
 /*Game head*/
-
 #game-head {
     border-radius: 3px;
 }
@@ -67,25 +66,11 @@
     margin-left: -30px;
 }
 
-.game-balls-center {
-    width: 300px;
-    margin: 0 auto;
-    padding-bottom: 10px;
-}
-
 #ball {
     width:15px;
     height:15px;
     border-radius:50px;
     border-style: solid;
-}
-
-#bal {
-    border-style: solid;
-}
-
-#game-balls {
-    margin-left:15px;
 }
 
 #stick-balls {
@@ -152,7 +137,6 @@
 .bk {
     background: black;
 }
-
 
 /*Copyright*/
 
