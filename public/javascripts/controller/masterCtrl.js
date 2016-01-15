@@ -62,6 +62,24 @@
         });
     };
 
+    (function( $ ){
+       $.fn.newGame = function() {
+          MasterService.newGame().then(function() {
+              WebsocketService.send("newGame");
+          });
+          return this;
+       };
+    })( jQuery );
+
+    (function( $ ){
+       $.fn.showSolution = function() {
+          MasterService.showSolution().then(function(response) {
+                WebsocketService.send("showSolution");
+            });
+          return this;
+       };
+    })( jQuery );
+
     /**
         * @desc: Receives game status from server.
     **/
@@ -76,15 +94,10 @@
         * @desc: Receives mastermind-colors from server.
     **/
 	$scope.getMastermindColors = function() {
-//        MasterService.getMastermindColors().then(function(response) {
-//            var masterColors = response.data.masterColors;
-//            $scope.masterColors = masterColors;
-//        });
         ajaxGetMastermindColors();
 	};
 
-	function ajaxGetMastermindColors()
-    {
+	function ajaxGetMastermindColors() {
         $.ajax({
             type: "GET",
             url: "/getMastermindColors"
@@ -155,8 +168,8 @@
     **/
 	$scope.newGame = function() {
 		MasterService.newGame().then(function() {
-		    WebsocketService.send("newGame");
-		});
+            WebsocketService.send("newGame");
+        });
 	};
 
     /**
@@ -245,20 +258,14 @@
         });
     };
 
-    /**
-        * @desc: Increases or decreases size of the game-grid.
-        * @param: number rows - the new rows amount
-        * @param: number cols - the new columns amount
-    **/
-    $scope.resetSize = function(rows, cols) {
-        //MasterService.resetSize(rows, cols).then(function(response) {
-        //WebsocketService.send("resetSize");
-        //        });
-        ajax_resetSize(rows, cols);
-    };
+    (function( $ ){
+       $.fn.resetSize = function(rows, cols) {
+          ajax_resetSize(rows, cols);
+          return this;
+       };
+     })( jQuery );
 
-    function ajax_resetSize(rows, cols)
-    {
+    function ajax_resetSize(rows, cols) {
         $.ajax({
             type: "GET",
             url: "/resetSize/" + rows + "/" + cols
