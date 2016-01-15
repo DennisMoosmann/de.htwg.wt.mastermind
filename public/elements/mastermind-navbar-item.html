@@ -1,0 +1,57 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<dom-module id="mastermind-navbar-item">
+    <style>
+        .navbar-item-list-item {
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
+
+        .navbar .navbar-collapse {
+            text-align: center;
+        }
+
+        .navbar-item-padding {
+            padding-top: 15px;
+            border: none;
+        }
+
+        .navbar-item-link {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .navbar-item-link:hover {
+            color: black;
+        }
+
+    </style>
+    <template>
+        <li id="my-navbar-item" class="navbar navbar-nav navbar-collapse navbar-item-padding"><a class="navbar-item-link" href="" on-click="callFunction">{{text}}</a></li>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-navbar-item',
+    properties: {
+        funcname: {
+            type: String
+        },
+        text: {
+            type: String
+        }
+    },
+    callFunction: function() {
+        if (this.funcname == 'newGame') {
+            $('#my-navbar-item').newGame();
+        }
+
+        if (this.funcname == 'showSolution') {
+            $('#my-navbar-item').showSolution();
+        }
+    }
+  });
+</script>
