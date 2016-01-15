@@ -1,0 +1,18 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/mastermind-ball.html">
+
+<dom-module id="mastermind-master-balls">
+    <template>
+        <div class="game-mastercolors-center">
+            <div ng-repeat="color in masterColors track by $index" style="float:left;">
+                <div id="masters" ng-class="color"></div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-master-balls'
+  });
+</script>

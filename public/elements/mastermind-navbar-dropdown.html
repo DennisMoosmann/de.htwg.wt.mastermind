@@ -1,0 +1,91 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<dom-module id="mastermind-navbar-dropdown">
+    <style>
+        .navbar-item-list-item {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        }
+
+        .navbar .navbar-collapse {
+        text-align: center;
+        }
+
+        .navbar-item-padding {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: none;
+        }
+
+        .navbar-item-link {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .navbar-item-link:hover {
+            color: black;
+        }
+
+        #my-navbar-dropdown open {
+            background-color: red;
+        }
+
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+            background-color: red;/*#eee;*/
+            border-color: #428bca;
+        }
+
+        .dropdown-menu-style {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+    </style>
+    <template>
+        <li id="my-navbar-dropdown" class="dropdown navbar navbar-nav navbar-collapse navbar-item-padding">
+            <a href="" class="dropdown-toggle mastermind-navbar navbar-item-link" data-toggle="dropdown">{{text}}<span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-style" role="menu">
+                <template is="dom-repeat" items="{{functions}}">
+                    <li><a href="javascript:undefined" on-click="callFunction">{{item.name}}</a></li>
+                </template>
+            </ul>
+        </li>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-navbar-dropdown',
+    properties: {
+        text: {
+            type: String
+        },
+        functions: {
+            type: Array
+        }
+    },
+    arrayItem: function(change, index, path) {
+        // this.get(path, root) returns a value for a path
+        // relative to a root object.
+        return this.get(path, change.base[index]);
+    },
+    callFunction: function(target) {
+        var name = target.currentTarget.firstChild.data;
+
+        if (name == "11*6") {
+            $('#my-navbar-dropdown').resetSize(12, 12);
+        }
+
+        if (name == "7*4") {
+            $('#my-navbar-dropdown').resetSize(8, 8);
+        }
+
+        if (name == "3*2") {
+            $('#my-navbar-dropdown').resetSize(4, 4);
+        }
+    }
+  });
+</script>

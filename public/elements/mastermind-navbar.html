@@ -33,25 +33,13 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="" ng-click="newGame()">New game</a></li>
-                            <li><a href="" ng-click="showSolution('true')">Show solution</a></li>
-                            <li class="dropdown">
-                                <a href="" class="dropdown-toggle" data-toggle="dropdown">Set size <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="" ng-click="resetSize(12,12)">11*6</a></li>
-                                    <li><a href="" ng-click="resetSize(8, 8)">7*4</a></li>
-                                    <li><a href="" ng-click="resetSize(4,4)">3*2</a></li>
-                                </ul>
-                            </li>
-                            <li><a id="linkInstructions" href="" data-toggle="popover" title="Instructions"
-                                   data-content="Can you guess the hidden 'Mastercolors' in the right order? Click on the
-                               balls of the actual row to choose a color. If you're done click 'Confirm row'. The small balls
-                               will give you information about your choice: <b>WHITE:</b> right color on wrong place
-                               <b>BLACK:</b> right color on right place <b>GREY:</b> color not in solution"
-                                   data-trigger="focus" data-html="true" data-placement="bottom" container="body">Instructions</a></li>
+                            <mastermind-navbar-item funcname="newGame" text="New game"></mastermind-navbar-item>
+                            <mastermind-navbar-item funcname="showSolution" text="Show solution"></mastermind-navbar-item>
+                            <mastermind-navbar-dropdown text="Set size" functions="{{functions}}"></mastermind-navbar-dropdown>
+                            <mastermind-navbar-popover title="Instructions" text="{{popoverText}}"></mastermind-navbar-popover>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a id="loggedInMail">Logged in as: {{user}}</a></li>
+                            <mastermind-navbar-item text="Logged in as: {{user}}"></mastermind-navbar-item>
                         </ul>
                     </div>
                 </div>
@@ -62,6 +50,16 @@
 
 <script>
   Polymer({
-    is: 'mastermind-navbar'
+    is: 'mastermind-navbar',
+    properties: {
+        functions: {
+          type: Array,
+          value: [{ name: '11*6' }, { name: '7*4'}, { name: '3*2'} ]
+        },
+        popoverText: {
+            type: String,
+            value: 'Can you guess the hidden Mastercolors in the right order? Click on the balls of the actual row to choose a color. If you`re done click Confirm row. The small balls will give you information about your choice: <b>WHITE:</b> right color on wrong place <b>BLACK:</b> right color on right place <b>GREY:</b> color not in solution'
+        }
+      }
   });
 </script>

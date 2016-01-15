@@ -1,0 +1,22 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+<dom-module id="mastermind-ball">
+    <style>
+        #bal {
+            border-style: solid;
+            width:30px;
+            height:30px;
+            border-radius:50px;
+        }
+    </style>
+    <template>
+        <div id="bal" ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-ball'
+  });
+</script>

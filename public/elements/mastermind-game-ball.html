@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../elements/mastermind-ball.html">
 
-<dom-module id="mastermind-ball" >
+<dom-module id="mastermind-game-ball">
     <style>
         .game-balls-center {
             width: 300px;
@@ -32,7 +33,7 @@
                 <div class="game-balls-center">
                     <div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng-init="parentIndex=$index">
                         <div class="balls-margin" ng-repeat="x in elmt track by $index" ng-class="x">
-                            <div id="bal" class={{x}} ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+                            <mastermind-ball></mastermind-ball>
                         </div>
                     </div>
                 </div>
@@ -43,6 +44,6 @@
 
 <script>
   Polymer({
-    is: 'mastermind-ball'
+    is: 'mastermind-game-ball'
   });
 </script>

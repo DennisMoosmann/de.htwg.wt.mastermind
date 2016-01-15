@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="mastermind-navbar-popover">
+    <style>
+        .navbar-item-list-item {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+        }
+
+        .navbar .navbar-collapse {
+        text-align: center;
+        }
+
+        .navbar-item-padding {
+            padding-top: 15px;
+            border: none;
+        }
+
+        .navbar-item-link {
+            color: #777;
+            text-decoration: none;
+            padding-bottom: 15px;
+        }
+
+        .navbar-item-link:hover {
+            color: black;
+        }
+    </style>
+    <template>
+        <li class="navbar navbar-nav navbar-collapse navbar-item-padding"><a id="linkInstructions" class="navbar-item-link" href="" data-toggle="popover" title="{{title}}"
+               data-content="Can you guess the hidden 'Mastercolors' in the right order? Click on the
+                               balls of the actual row to choose a color. If you're done click 'Confirm row'. The small balls
+                               will give you information about your choice: <b>WHITE:</b> right color on wrong place
+                               <b>BLACK:</b> right color on right place <b>GREY:</b> color not in solution"
+               data-trigger="focus" data-html="true" data-placement="bottom" container="body">{{title}}</a></li>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-navbar-popover',
+    properties: {
+        text: {
+          type: String,
+        },
+        title: {
+          type: String,
+        },
+    }
+  });
+</script>
