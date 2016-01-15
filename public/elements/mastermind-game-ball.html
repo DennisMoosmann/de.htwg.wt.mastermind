@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="mastermind-ball" >
+    <style>
+        .game-balls-center {
+            width: 300px;
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+
+        #bal {
+            border-style: solid;
+            width:30px;
+            height:30px;
+            border-radius:50px;
+        }
+
+        #game-balls {
+            margin-left:15px;
+        }
+
+        .balls-margin {
+            float:left;
+            margin-left:15px;
+            margin-top:20px;
+            border-radius:50px;
+        }
+    </style>
+    <template>
+        <div class="col-md-5 col-xs-5">
+            <div class="game-balls-center">
+                <div class="game-balls-center">
+                    <div id="game-balls" class="row" ng-repeat="elmt in gameArray" ng-init="parentIndex=$index">
+                        <div class="balls-margin" ng-repeat="x in elmt track by $index" ng-class="x">
+                            <div id="bal" class={{x}} ng-click="setValue(actualRow,parentIndex,$index,x)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'mastermind-ball'
+  });
+</script>
