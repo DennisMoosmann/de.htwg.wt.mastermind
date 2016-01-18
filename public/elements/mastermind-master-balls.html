@@ -3,9 +3,12 @@
 
 <dom-module id="mastermind-master-balls">
     <template>
-        <div class="game-mastercolors-center">
-            <div ng-repeat="color in masterColors track by $index" style="float:left;">
-                <div id="masters" ng-class="color"></div>
+        <div ng-repeat="color in masterColors track by $index" style="float:left;">
+            <div ng-if="$index == 0">
+                <div id="masters-first" ng-class="color" ></div>
+            </div>
+            <div ng-if="$index != 0">
+                <div id="masters" ng-class="color" ></div>
             </div>
         </div>
     </template>

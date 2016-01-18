@@ -27,6 +27,12 @@
             color: black;
         }
 
+        @media screen and (min-width: 454px) and (max-width: 767px) {
+            #my-navbar-item {
+                margin-left: 30px;
+            }
+        }
+
     </style>
     <template>
         <li id="my-navbar-item" class="navbar navbar-nav navbar-collapse navbar-item-padding"><a class="navbar-item-link" href="" on-click="callFunction">{{text}}</a></li>

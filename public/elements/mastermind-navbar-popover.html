@@ -26,9 +26,16 @@
         .navbar-item-link:hover {
             color: black;
         }
+
+        @media screen and (min-width: 454px) and (max-width: 767px) {
+            #my-navbar-popover {
+            margin-left: 30px;
+            }
+        }
+
     </style>
     <template>
-        <li class="navbar navbar-nav navbar-collapse navbar-item-padding"><a id="linkInstructions" class="navbar-item-link" href="" data-toggle="popover" title="{{title}}"
+        <li id="my-navbar-popover" class="navbar navbar-nav navbar-collapse navbar-item-padding"><a id="linkInstructions" class="navbar-item-link" href="" data-toggle="popover" title="{{title}}"
                data-content="Can you guess the hidden 'Mastercolors' in the right order? Click on the
                                balls of the actual row to choose a color. If you're done click 'Confirm row'. The small balls
                                will give you information about your choice: <b>WHITE:</b> right color on wrong place
