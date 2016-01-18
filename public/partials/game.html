@@ -1,7 +1,7 @@
 <div class="container">
     <mastermind-navbar user="{{userMail}}"></mastermind-navbar>
-    <div id="game-head">
-        <hr id="hr1">
+    <hr id="hr1">
+    <div class="row">
         <div class="col-md-6 col-xs-12">
             <div id="game-status" >
                 <p>STATE</p>
@@ -9,28 +9,31 @@
             </div>
         </div>
         <div class="col-md-6 col-xs-12">
-            <div id="game-mastercolors" class="bs-docs-header">
+            <div id="game-mastercolors">
                 <p>MASTERCOLORS</p>
-                <mastermind-master-balls></mastermind-master-balls>
+
+                <div class="row">
+                    <div class="col-md-offset-2 col-xs-offset-5">
+                        <mastermind-master-balls></mastermind-master-balls>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div id="game-gamefield" class="bs-docs-header">
-        <div class="container">
-            <div class="col-md-2 col-xs-12">
+    <div id="game-gamefield">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
                 <div id="gamefield-text">
                     <p>PLAYING FIELD</p>
                 </div>
             </div>
-            <div class="col-md-1 col-md-offset-1 col-xs-2 ">
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1 col-xs-2">
                 <hr id="hr2">
                 <button ng-style="btnMarginTop" id="btnConfirmRow" ng-click="confirmRow()" type="button" class="btn btn-success">Confirm row</button>
             </div>
-            <div class="col-md-2 col-xs-4">
+            <div class="col-md-2 col-md-offset-1 col-xs-1 col-xs-offset-1">
                 <div class="stick-balls-align" id="grid">
                     <div id="stick-balls" class="row" ng-repeat="stick in stickArray" ng-init="parentIndex=$index">
                         <div ng-id="stickBa" id="stickBall" style="float:left; margin-left:3px;margin-top:3px;margin-bottom:2.5px;border-radius:50px;" ng-repeat="y in stick track by $index" ng-class="y">
@@ -40,7 +43,9 @@
                     </div>
                 </div>
             </div>
-            <mastermind-game-ball></mastermind-game-ball>
+            <div class="col-md-5 col-xs-6">
+                <mastermind-game-ball></mastermind-game-ball>
+            </div>
         </div>
     </div>
     <hr id="hr3">
