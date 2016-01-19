@@ -4,7 +4,7 @@
         * @desc: Creates new game. Is called on load.
     **/
     $scope.init = function() {
-        $scope.getStatus();
+        getStatus();
         $scope.getMastermindColors();
         $scope.getGameGrid();
         $scope.getStickGrid();
@@ -80,15 +80,15 @@
        };
     })( jQuery );
 
-    /**
-        * @desc: Receives game status from server.
-    **/
-    $scope.getStatus = function() {
-        MasterService.getStatus().then(function(response) {
-        	var status = response.data;
-        	$scope.status = status;
+    function getStatus() {
+        $.ajax({
+            type: "GET",
+            url: "/getStatus"
+        }).success(function(data) {
+            var status = data;
+            $('#status').text(status);
         });
-    };
+    }
 
     /**
         * @desc: Receives mastermind-colors from server.
@@ -338,8 +338,8 @@
         });
         $scope.stickArray = stickGrid;
 
-        if ($scope.status != 'You have won!!' && $scope.status != 'You have lost!!' ) {
-            $scope.status = data.status;
+        if ($('#status').text() != 'You have won!!' && $('#status').text() != 'You have lost!!' ) {
+            $('#status').text(data.status);
         }
 
         $scope.actualRow = data.actualRow;
